@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NaturEspaces — Pensons le paysage autrement | Paysagiste d'insertion</title>
+    <meta name="description" content="NaturEspaces, SARL d'insertion paysagiste à Chaville (92). 106 sites d'interventions, 19 clients, 5 départements d'Île-de-France. Pensons le paysage autrement." />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="NaturEspaces — Pensons le paysage autrement" />
+    <meta property="og:description" content="SARL d'insertion paysagiste : aménagement, entretien et gestion différenciée des espaces verts en Île-de-France." />
+    <meta property="og:image" content="assets/images/hero.jpeg" />
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path fill='%234A7023' d='M32 6c-9 8-18 16-18 28a18 18 0 0 0 36 0c0-12-9-20-18-28z'/><path fill='%238DB600' d='M32 18c-5 6-11 12-11 20a11 11 0 0 0 22 0c0-8-6-14-11-20z'/></svg>" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+
+    <link rel="stylesheet" href="assets/css/animations.css" />
+
+    <style type="text/tailwindcss">
+        :root {
+            --primary: #E67E22;
+            --secondary: #4A7023;
+            --accent: #8DB600;
+        }
+        @layer base {
+            .font-display { font-family: 'Playfair Display', serif; }
+            .font-body { font-family: 'Outfit', sans-serif; }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(74, 112, 35, 0.1);
+        }
+        .bg-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(74, 112, 35, 0.05) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+        .logo-frame {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            padding: 1rem;
+            height: 6rem;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            filter: grayscale(60%);
+        }
+        .logo-frame:hover {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+        .logo-frame img {
+            max-height: 100%;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body class="font-body bg-[#FDFCFB] text-slate-800 antialiased bg-pattern">
+
+    <!-- Header sticky : navigation utilitaire au scroll (le grand logo central reste plus bas) -->
+    <header class="legal-header sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 h-[72px] flex items-center justify-between gap-4">
+            <a href="#" class="shrink-0" aria-label="Haut de page NaturEspaces">
+                <img src="assets/images/logo-naturespaces.png" alt="Logo NaturEspaces" class="h-14 w-auto" />
+            </a>
+
+            <nav class="site-nav hidden lg:flex items-center gap-8" aria-label="Navigation principale">
+                <a href="#qui-sommes-nous" class="site-nav-link text-slate-600 hover:text-[var(--primary)] font-medium text-sm transition-colors">Qui sommes-nous</a>
+                <a href="#demarche" class="site-nav-link text-slate-600 hover:text-[var(--primary)] font-medium text-sm transition-colors">Notre démarche</a>
+                <a href="#references" class="site-nav-link text-slate-600 hover:text-[var(--primary)] font-medium text-sm transition-colors">Références</a>
+                <a href="#contact" class="site-nav-link text-slate-600 hover:text-[var(--primary)] font-medium text-sm transition-colors">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="mailto:bassem.gastli@naturespaces.net?subject=Demande%20de%20rappel%20-%20NaturEspaces&body=Bonjour%2C%0A%0AJe%20souhaiterais%20%C3%AAtre%20rappel%C3%A9%20au%20num%C3%A9ro%20suivant%20%3A%20%0A%0AObjet%20de%20ma%20demande%20%3A%20%0A%0AMerci." class="hidden sm:inline-flex items-center gap-2 bg-[var(--primary)] hover:bg-[#D35400] text-white px-4 py-2 rounded-full font-semibold transition-colors text-sm shadow-sm shadow-[var(--primary)]/20">
+                    <span class="material-symbols-outlined text-base" aria-hidden="true">notifications_active</span>
+                    Demander un rappel
+                </a>
+                <button type="button" class="burger lg:hidden" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="legal-mobile-nav">
+                    <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Navigation mobile -->
+        <nav id="legal-mobile-nav" class="legal-mobile-nav lg:hidden" aria-label="Navigation mobile" hidden>
+            <a href="#qui-sommes-nous">Qui sommes-nous</a>
+            <a href="#demarche">Notre démarche</a>
+            <a href="#references">Références</a>
+            <a href="#contact">Contact</a>
+            <a href="mailto:bassem.gastli@naturespaces.net?subject=Demande%20de%20rappel%20-%20NaturEspaces&body=Bonjour%2C%0A%0AJe%20souhaiterais%20%C3%AAtre%20rappel%C3%A9%20au%20num%C3%A9ro%20suivant%20%3A%20%0A%0AObjet%20de%20ma%20demande%20%3A%20%0A%0AMerci.">Demander un rappel</a>
+        </nav>
+    </header>
+
+    <!-- Section 1 : Header -->
+    <header class="pt-16 pb-12 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <img
+                src="assets/images/logo-naturespaces.png"
+                alt="Logo NaturEspaces — Pensons le paysage autrement"
+                class="h-32 md:h-40 mx-auto"
+            />
+        </div>
+    </header>
+
+    <!-- Section 2 : Hero -->
+    <section class="px-6 pb-12">
+        <div class="hero-shell max-w-7xl mx-auto relative h-[600px] overflow-hidden rounded-3xl shadow-2xl">
+            <img
+                src="assets/images/hero.jpeg"
+                alt="Espace vert aménagé par NaturEspaces"
+                class="hero-img w-full h-full object-cover absolute inset-0"
+            />
+            <div class="hero-mesh"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-center justify-center px-6 z-10">
+                <h1 class="text-white font-display text-5xl md:text-8xl font-bold text-center drop-shadow-lg">
+                    Pensons le paysage<br />
+                    <span class="text-[var(--primary)] italic">autrement</span>
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3 : Bandeau cartographie 2025-2026 -->
+    <section class="px-6 pb-16 reveal">
+        <div class="max-w-5xl mx-auto bg-white border border-[var(--secondary)]/15 rounded-full px-6 md:px-10 py-4 md:py-5 shadow-md flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-1 text-center">
+            <span class="text-[var(--primary)] font-semibold uppercase tracking-wider text-xs md:text-sm flex items-center gap-2">
+                <span class="material-symbols-outlined text-base" aria-hidden="true">map</span>
+                Cartographie 2025-2026
+            </span>
+            <span class="hidden sm:inline text-slate-300">|</span>
+            <span class="text-slate-700 text-sm md:text-base font-medium">
+                <strong class="text-[var(--secondary)]">19</strong> clients ·
+                <strong class="text-[var(--secondary)]">106</strong> sites ·
+                <strong class="text-[var(--secondary)]">5</strong> départements d'Île-de-France
+            </span>
+        </div>
+    </section>
+
+    <!-- Bloc A : Qui sommes-nous ? -->
+    <section id="qui-sommes-nous" class="max-w-6xl mx-auto px-6 py-20 reveal scroll-mt-24">
+        <div class="text-center mb-14">
+            <h2 class="font-display text-3xl md:text-4xl font-bold text-[var(--secondary)] mb-3">Qui sommes-nous ?</h2>
+            <p class="font-display italic text-xl md:text-2xl text-[var(--primary)]">L'expertise paysagère au service de l'inclusion.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+            <article class="card-hover-premium bg-white p-8 rounded-2xl shadow-sm border-t-4 border-[var(--primary)]">
+                <div class="w-14 h-14 bg-[var(--primary)]/10 text-[var(--primary)] rounded-xl flex items-center justify-center mb-5">
+                    <span class="material-symbols-outlined text-3xl card-icon" aria-hidden="true">corporate_fare</span>
+                </div>
+                <h3 class="font-display text-xl font-bold text-slate-900 mb-3">Création &amp; modèle</h3>
+                <p class="text-slate-600 leading-relaxed">Fondée en 2013 à Chaville (Hauts-de-Seine), NaturEspaces est une SARL d'insertion qui conjugue exigence paysagère et engagement social. Notre modèle d'entreprise d'insertion (EI), labellisé Économie Sociale et Solidaire (ESS), fait du chantier paysager un véritable levier d'inclusion professionnelle.</p>
+            </article>
+
+            <article class="card-hover-premium bg-white p-8 rounded-2xl shadow-sm border-t-4 border-[var(--secondary)]">
+                <div class="w-14 h-14 bg-[var(--secondary)]/10 text-[var(--secondary)] rounded-xl flex items-center justify-center mb-5">
+                    <span class="material-symbols-outlined text-3xl card-icon" aria-hidden="true">diversity_3</span>
+                </div>
+                <h3 class="font-display text-xl font-bold text-slate-900 mb-3">Notre mission</h3>
+                <p class="text-slate-600 leading-relaxed">Depuis 13 ans, nous accompagnons des femmes et des hommes éloignés de l'emploi vers une réinsertion durable, à travers les métiers du paysage. Notre exigence opérationnelle est inséparable de notre vocation sociale : la qualité de nos interventions est la première reconnaissance du chemin parcouru par nos salarié·es.</p>
+            </article>
+
+            <article class="card-hover-premium bg-white p-8 rounded-2xl shadow-sm border-t-4 border-[var(--accent)]">
+                <div class="w-14 h-14 bg-[var(--accent)]/10 text-[var(--accent)] rounded-xl flex items-center justify-center mb-5">
+                    <span class="material-symbols-outlined text-3xl card-icon" aria-hidden="true">map</span>
+                </div>
+                <h3 class="font-display text-xl font-bold text-slate-900 mb-3">Ancrage territorial</h3>
+                <p class="text-slate-600 leading-relaxed">Implantés en Île-de-France, nous intervenons sur 106 sites pour 19 clients institutionnels et privés, répartis sur 5 départements. Notre activité s'inscrit pleinement dans la commande publique responsable et les politiques locales d'insertion.</p>
+            </article>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-3 md:gap-4 mt-12">
+            <span class="inline-flex items-center gap-2 bg-[var(--secondary)]/10 text-[var(--secondary)] font-semibold text-sm px-5 py-2 rounded-full border border-[var(--secondary)]/20"><span class="material-symbols-outlined text-base" aria-hidden="true">eco</span>ESS</span>
+            <span class="inline-flex items-center gap-2 bg-[var(--primary)]/10 text-[var(--primary)] font-semibold text-sm px-5 py-2 rounded-full border border-[var(--primary)]/20"><span class="material-symbols-outlined text-base" aria-hidden="true">handshake</span>EI</span>
+            <span class="inline-flex items-center gap-2 bg-[var(--accent)]/15 text-[var(--secondary)] font-semibold text-sm px-5 py-2 rounded-full border border-[var(--accent)]/30"><span class="material-symbols-outlined text-base" aria-hidden="true">calendar_today</span>13 ans</span>
+            <span class="inline-flex items-center gap-2 bg-[var(--secondary)]/10 text-[var(--secondary)] font-semibold text-sm px-5 py-2 rounded-full border border-[var(--secondary)]/20"><span class="material-symbols-outlined text-base" aria-hidden="true">location_on</span>IDF</span>
+        </div>
+    </section>
+
+    <!-- Bloc C : Notre histoire (frise chronologique) -->
+    <section id="notre-histoire" class="bg-[var(--secondary)]/5 border-y border-slate-100 py-20 px-6 reveal scroll-mt-24">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-14">
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-[var(--secondary)] mb-3">Notre histoire</h2>
+                <p class="text-slate-500 uppercase tracking-[0.2em] text-xs md:text-sm font-semibold">De 2013 à aujourd'hui</p>
+            </div>
+
+            <!-- Frise : ligne temporelle continue (horizontale desktop / verticale mobile) -->
+            <ol class="timeline-track" data-stagger>
+                <li class="timeline-item stagger-item" style="--d:0ms">
+                    <time class="timeline-date">2013</time>
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="timeline-card"><p>Création de NaturEspaces à Chaville (entreprise d'insertion paysagiste).</p></div>
+                </li>
+                <li class="timeline-item stagger-item" style="--d:80ms">
+                    <time class="timeline-date">2013</time>
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="timeline-card"><p>Accueil du premier ouvrier en parcours d'insertion.</p></div>
+                </li>
+                <li class="timeline-item stagger-item" style="--d:160ms">
+                    <time class="timeline-date timeline-date--todo">[À COMPLÉTER]</time>
+                    <span class="timeline-dot timeline-dot--todo" aria-hidden="true"><span class="material-symbols-outlined" aria-hidden="true">add_circle</span></span>
+                    <div class="timeline-card timeline-card--todo"><p><em>Premier contrat avec un bailleur social.</em></p></div>
+                </li>
+                <li class="timeline-item stagger-item" style="--d:240ms">
+                    <time class="timeline-date timeline-date--todo">[À COMPLÉTER]</time>
+                    <span class="timeline-dot timeline-dot--todo" aria-hidden="true"><span class="material-symbols-outlined" aria-hidden="true">add_circle</span></span>
+                    <div class="timeline-card timeline-card--todo"><p><em>Référencement sur les marchés publics réservés.</em></p></div>
+                </li>
+                <li class="timeline-item stagger-item" style="--d:320ms">
+                    <time class="timeline-date">2024</time>
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="timeline-card"><p>Lancement de la formation Afest en partenariat avec OCAPIAT.</p></div>
+                </li>
+                <li class="timeline-item stagger-item" style="--d:400ms">
+                    <time class="timeline-date">2025</time>
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="timeline-card"><p>Cartographie : 106 sites · 19 clients · 5 départements d'Île-de-France.</p></div>
+                </li>
+                <li class="timeline-item stagger-item" style="--d:480ms">
+                    <time class="timeline-date timeline-date--todo">[À COMPLÉTER]</time>
+                    <span class="timeline-dot timeline-dot--todo" aria-hidden="true"><span class="material-symbols-outlined" aria-hidden="true">add_circle</span></span>
+                    <div class="timeline-card timeline-card--todo"><p><em>Prochaine ambition 2026.</em></p></div>
+                </li>
+            </ol>
+            <p class="hidden md:block text-center text-xs text-slate-400 italic mt-6">‹ Faites défiler la frise horizontalement ›</p>
+        </div>
+    </section>
+
+    <!-- Section 4 : Engagement & Expertise -->
+    <section class="max-w-6xl mx-auto px-6 py-20 reveal">
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div class="space-y-6">
+                <h2 class="text-3xl font-display font-bold text-[var(--secondary)] border-l-4 border-[var(--primary)] pl-6">
+                    Notre Engagement Social
+                </h2>
+                <p class="text-lg leading-relaxed text-slate-700">
+                    NaturEspaces se distingue par son modèle d'entreprise d'insertion, où chaque projet paysager devient un levier d'inclusion. Nous accompagnons des hommes et des femmes vers un retour durable à l'emploi en leur transmettant l'exigence et la noblesse des métiers du paysage.
+                </p>
+                <p class="text-lg leading-relaxed text-slate-700">
+                    Notre approche repose sur la valorisation des compétences individuelles au service du collectif, transformant des parcours de vie par le travail de la terre et le respect du vivant.
+                </p>
+            </div>
+
+            <div class="space-y-6 bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                <h2 class="text-3xl font-display font-bold text-[var(--secondary)]">
+                    Expertise &amp; Formation
+                </h2>
+                <p class="text-lg leading-relaxed text-slate-700">
+                    En 2024, nous avons franchi une étape majeure avec le déploiement de la formation <strong>Afest</strong> (Action de Formation en Situation de Travail) en partenariat avec <strong>OCAPIAT</strong>. Ce dispositif permet une montée en compétences immédiate et concrète sur le terrain.
+                </p>
+                <p class="text-lg leading-relaxed text-slate-700">
+                    Cette pédagogie innovante assure à nos clients une qualité d'exécution irréprochable tout en garantissant à nos salariés une transition fluide vers un emploi pérenne dans le secteur du paysage.
+                </p>
+            </div>
+        </div>
+
+        <!-- Bandeau : Marchés réservés & clause sociale -->
+        <div class="card-hover-premium max-w-6xl mx-auto mt-12 bg-gradient-to-r from-[var(--secondary)]/5 to-[var(--accent)]/5 border-l-4 border-[var(--primary)] rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-start gap-6">
+            <span class="material-symbols-outlined text-5xl text-[var(--primary)] shrink-0 card-icon" aria-hidden="true">verified</span>
+            <div>
+                <h3 class="font-display font-bold text-xl text-[var(--secondary)] mb-3">Marchés réservés &amp; clause sociale</h3>
+                <p class="text-base leading-relaxed text-slate-700">Une part majeure de nos 106 sites d'interventions relève de marchés réservés à l'insertion (article L. 2113-13 du Code de la commande publique) ou comportant une clause sociale d'insertion. Un modèle qui s'inscrit pleinement dans la commande publique responsable.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bloc D : Notre démarche d'insertion (4 étapes) -->
+    <section id="demarche" class="max-w-7xl mx-auto px-6 py-20 reveal scroll-mt-24">
+        <div class="text-center mb-14">
+            <h2 class="font-display text-3xl md:text-4xl font-bold text-[var(--secondary)] mb-3">Notre démarche d'insertion</h2>
+            <p class="text-slate-500 uppercase tracking-[0.2em] text-xs md:text-sm font-semibold">Un parcours en 4 étapes</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-5" data-stagger>
+            <article class="step-card card-hover-premium stagger-item relative bg-white p-7 rounded-2xl shadow-sm border border-slate-100" style="--d:0ms">
+                <span class="step-arrow material-symbols-outlined" aria-hidden="true">east</span>
+                <div class="flex items-center justify-between mb-4">
+                    <span class="font-display text-4xl font-bold text-[var(--primary)]/30">01</span>
+                    <span class="w-12 h-12 bg-[var(--primary)]/10 text-[var(--primary)] rounded-xl flex items-center justify-center"><span class="material-symbols-outlined text-2xl card-icon" aria-hidden="true">person_search</span></span>
+                </div>
+                <h3 class="font-bold text-lg text-slate-900 mb-2">Recrutement</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Orientation des candidat·es via France Travail, structures d'insertion par l'activité économique (IAE) et partenaires sociaux. Entretien préalable et évaluation du projet professionnel.</p>
+            </article>
+
+            <article class="step-card card-hover-premium stagger-item relative bg-white p-7 rounded-2xl shadow-sm border border-slate-100" style="--d:120ms">
+                <span class="step-arrow material-symbols-outlined" aria-hidden="true">east</span>
+                <div class="flex items-center justify-between mb-4">
+                    <span class="font-display text-4xl font-bold text-[var(--secondary)]/30">02</span>
+                    <span class="w-12 h-12 bg-[var(--secondary)]/10 text-[var(--secondary)] rounded-xl flex items-center justify-center"><span class="material-symbols-outlined text-2xl card-icon" aria-hidden="true">school</span></span>
+                </div>
+                <h3 class="font-bold text-lg text-slate-900 mb-2">Formation Afest</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Action de Formation en Situation de Travail, déployée depuis 2024 en partenariat avec OCAPIAT. Apprentissage progressif des gestes techniques du métier sur le terrain.</p>
+            </article>
+
+            <article class="step-card card-hover-premium stagger-item relative bg-white p-7 rounded-2xl shadow-sm border border-slate-100" style="--d:240ms">
+                <span class="step-arrow material-symbols-outlined" aria-hidden="true">east</span>
+                <div class="flex items-center justify-between mb-4">
+                    <span class="font-display text-4xl font-bold text-[var(--accent)]/40">03</span>
+                    <span class="w-12 h-12 bg-[var(--accent)]/15 text-[var(--accent)] rounded-xl flex items-center justify-center"><span class="material-symbols-outlined text-2xl card-icon" aria-hidden="true">support_agent</span></span>
+                </div>
+                <h3 class="font-bold text-lg text-slate-900 mb-2">Accompagnement individualisé</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Suivi socio-professionnel personnalisé tout au long du parcours. Encadrement technique de proximité par des chefs d'équipe expérimentés.</p>
+            </article>
+
+            <article class="step-card card-hover-premium stagger-item relative bg-white p-7 rounded-2xl shadow-sm border border-slate-100" style="--d:360ms">
+                <span class="step-arrow material-symbols-outlined" aria-hidden="true">east</span>
+                <div class="flex items-center justify-between mb-4">
+                    <span class="font-display text-4xl font-bold text-[var(--primary)]/30">04</span>
+                    <span class="w-12 h-12 bg-[var(--primary)]/10 text-[var(--primary)] rounded-xl flex items-center justify-center"><span class="material-symbols-outlined text-2xl card-icon" aria-hidden="true">trending_up</span></span>
+                </div>
+                <h3 class="font-bold text-lg text-slate-900 mb-2">Sortie positive</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Transition vers l'emploi durable dans le secteur du paysage (CDI, CDD long) ou poursuite en formation qualifiante.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Section 5 : Chiffres clés (avec compteurs animés) -->
+    <section class="bg-[var(--secondary)]/5 py-24 px-6 border-y border-slate-100 reveal">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-center font-display text-3xl md:text-4xl font-bold text-[var(--secondary)] mb-4">
+                NaturEspaces en chiffres
+            </h2>
+            <p class="text-center text-slate-500 uppercase tracking-[0.2em] text-xs md:text-sm mb-16 font-semibold">
+                Cartographie 2025-2026
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="card-hover-premium bg-white p-8 rounded-2xl shadow-md border-t-4 border-[var(--primary)] text-center">
+                    <div class="text-[var(--primary)] mb-3"><span class="material-symbols-outlined text-5xl card-icon">calendar_today</span></div>
+                    <div class="text-5xl font-bold text-slate-900 mb-2"><span class="counter" data-counter-target="13" data-counter-suffix=" ans">0 ans</span></div>
+                    <div class="text-sm font-semibold uppercase tracking-wider text-slate-500">d'expérience depuis 2013</div>
+                </div>
+
+                <div class="card-hover-premium bg-white p-8 rounded-2xl shadow-md border-t-4 border-[var(--secondary)] text-center">
+                    <div class="text-[var(--secondary)] mb-3"><span class="material-symbols-outlined text-5xl card-icon">pin_drop</span></div>
+                    <div class="text-5xl font-bold text-slate-900 mb-2"><span class="counter" data-counter-target="106">0</span></div>
+                    <div class="text-sm font-semibold uppercase tracking-wider text-slate-500">Sites d'interventions</div>
+                </div>
+
+                <div class="card-hover-premium bg-white p-8 rounded-2xl shadow-md border-t-4 border-[var(--accent)] text-center">
+                    <div class="text-[var(--accent)] mb-3"><span class="material-symbols-outlined text-5xl card-icon">groups</span></div>
+                    <div class="text-5xl font-bold text-slate-900 mb-2"><span class="counter" data-counter-target="19">0</span></div>
+                    <div class="text-sm font-semibold uppercase tracking-wider text-slate-500">Clients actifs</div>
+                </div>
+
+                <div class="card-hover-premium bg-white p-8 rounded-2xl shadow-md border-t-4 border-[var(--primary)] text-center">
+                    <div class="text-[var(--primary)] mb-3"><span class="material-symbols-outlined text-5xl card-icon">map</span></div>
+                    <div class="text-5xl font-bold text-slate-900 mb-2"><span class="counter" data-counter-target="5">0</span><span class="text-3xl text-slate-400"> / 8</span></div>
+                    <div class="text-sm font-semibold uppercase tracking-wider text-slate-500">Départements d'Île-de-France couverts</div>
+                </div>
+
+                <div class="card-hover-premium bg-white p-8 rounded-2xl shadow-md border-t-4 border-[var(--secondary)] text-center">
+                    <div class="text-[var(--secondary)] mb-3"><span class="material-symbols-outlined text-5xl card-icon">apartment</span></div>
+                    <div class="text-5xl font-bold text-slate-900 mb-2"><span class="counter" data-counter-target="77">0</span></div>
+                    <div class="text-sm font-semibold uppercase tracking-wider text-slate-500">Sites chez les bailleurs sociaux</div>
+                </div>
+
+                <div class="card-hover-premium bg-white p-8 rounded-2xl shadow-md border-t-4 border-[var(--accent)] text-center">
+                    <div class="text-[var(--accent)] mb-3"><span class="material-symbols-outlined text-5xl card-icon">engineering</span></div>
+                    <div class="text-5xl font-bold text-slate-900 mb-2"><span class="counter" data-counter-target="100">0</span></div>
+                    <div class="text-sm font-semibold uppercase tracking-wider text-slate-500">Ouvrier·es paysagistes en insertion depuis 2013</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6 : Notre territoire d'intervention (carte IDF géographique réelle) -->
+    <section class="py-24 px-6 bg-white border-b border-slate-100 reveal">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-center font-display text-3xl md:text-4xl font-bold text-[var(--secondary)] mb-4">
+                Notre territoire d'intervention
+            </h2>
+            <p class="text-center text-slate-500 uppercase tracking-[0.2em] text-xs md:text-sm mb-16 font-semibold">
+                Île-de-France · 5 départements actifs sur 8
+            </p>
+
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+                <!-- Carte géographique réelle (paths issus du GeoJSON officiel) -->
+                <div class="idf-map-wrapper relative">
+                    <svg viewBox="0 0 1000 797" class="idf-map" role="img" aria-label="Carte de l'Île-de-France et de ses 8 départements">
+
+                        <!-- Départements inactifs (z-order : derrière) -->
+                        <path class="idf-dept idf-inactive" data-dept="95" data-name="Val-d'Oise" d="M 156.30 36.24 L 167.21 38.20 L 169.13 43.37 L 168.95 50.11 L 164.36 50.95 L 161.14 55.23 L 165.56 60.07 L 170.56 60.79 L 172.59 70.23 L 178.21 73.89 L 187.86 67.65 L 193.65 70.42 L 195.59 66.89 L 203.75 72.83 L 209.00 70.64 L 213.53 75.75 L 217.18 76.93 L 230.76 75.91 L 234.29 81.67 L 238.30 79.44 L 254.23 74.14 L 261.37 76.37 L 266.84 74.56 L 272.33 67.79 L 282.41 72.64 L 285.72 71.89 L 293.17 64.67 L 300.20 62.40 L 312.60 55.40 L 318.66 50.89 L 323.25 54.42 L 325.55 63.96 L 332.65 66.06 L 341.02 62.90 L 354.74 70.54 L 351.80 75.16 L 354.61 79.47 L 362.24 74.46 L 372.16 74.04 L 378.06 69.88 L 385.29 78.79 L 377.07 87.06 L 379.94 88.70 L 392.65 88.04 L 396.84 84.50 L 400.01 85.80 L 407.22 83.21 L 408.31 76.39 L 412.89 73.05 L 413.65 67.79 L 417.85 66.15 L 422.74 69.77 L 433.08 82.20 L 438.71 91.65 L 443.72 83.93 L 448.93 86.06 L 452.50 90.34 L 462.88 88.77 L 473.89 92.66 L 471.52 100.41 L 482.78 99.10 L 491.49 104.99 L 499.04 108.03 L 500.28 110.24 L 495.03 118.42 L 512.77 122.83 L 513.60 110.00 L 516.97 108.05 L 523.59 110.41 L 521.80 113.46 L 524.46 123.63 L 533.30 127.83 L 535.29 135.17 L 538.41 135.86 L 530.23 148.81 L 531.36 152.51 L 535.91 153.52 L 537.44 157.21 L 531.11 159.70 L 527.94 168.21 L 519.92 172.56 L 514.47 172.32 L 515.68 177.03 L 520.52 178.26 L 522.25 181.46 L 519.98 184.69 L 513.28 184.46 L 507.29 194.75 L 505.74 199.46 L 499.55 202.43 L 497.65 205.69 L 485.29 211.16 L 481.91 217.23 L 468.01 214.50 L 459.44 216.52 L 453.81 212.32 L 449.59 206.81 L 441.79 204.73 L 436.28 210.20 L 425.09 214.22 L 415.77 212.28 L 412.69 209.88 L 408.07 215.07 L 409.24 219.89 L 399.65 222.76 L 383.45 235.06 L 370.27 247.51 L 371.61 243.78 L 369.56 230.15 L 372.61 226.72 L 372.55 220.69 L 358.61 218.46 L 360.66 211.29 L 358.50 203.78 L 350.59 197.19 L 338.53 194.96 L 335.83 192.25 L 338.59 181.55 L 336.06 175.90 L 331.32 182.17 L 320.39 178.29 L 316.31 186.40 L 311.56 182.51 L 305.28 185.78 L 294.46 188.68 L 290.00 187.18 L 280.28 174.15 L 272.59 175.19 L 264.35 171.85 L 256.96 173.65 L 244.33 156.51 L 233.42 165.98 L 232.85 175.11 L 227.34 175.96 L 219.96 164.88 L 223.68 157.61 L 225.77 150.34 L 215.56 145.65 L 215.07 142.60 L 207.87 138.01 L 196.05 140.70 L 197.47 145.72 L 195.02 149.67 L 187.95 150.92 L 180.13 146.52 L 176.08 152.54 L 176.49 156.38 L 169.79 156.08 L 164.53 158.50 L 161.80 155.85 L 152.23 151.09 L 153.18 144.80 L 143.08 136.84 L 137.28 134.92 L 129.81 134.81 L 123.92 136.75 L 117.41 141.22 L 115.10 137.01 L 121.36 131.66 L 118.86 126.49 L 131.61 106.43 L 135.36 102.87 L 134.55 92.90 L 139.06 87.72 L 140.20 71.23 L 144.49 55.61 L 143.96 49.52 L 156.18 38.12 L 156.30 36.24 Z"/>
+
+                        <path class="idf-dept idf-inactive" data-dept="77" data-name="Seine-et-Marne" d="M 530.27 388.99 L 531.81 383.54 L 529.04 379.06 L 536.12 365.99 L 540.20 363.01 L 536.38 356.69 L 543.50 348.69 L 541.76 344.28 L 548.38 343.93 L 545.51 335.19 L 539.03 337.15 L 536.29 332.43 L 542.39 321.76 L 538.97 319.69 L 539.16 313.62 L 540.97 311.37 L 539.27 301.58 L 531.21 283.61 L 535.22 281.12 L 537.03 276.03 L 528.74 275.41 L 529.66 268.54 L 524.99 262.75 L 526.38 260.43 L 535.52 256.17 L 538.73 248.71 L 538.48 237.92 L 543.62 234.00 L 537.88 218.07 L 526.73 202.41 L 533.78 197.68 L 534.01 193.36 L 530.28 187.98 L 527.74 179.78 L 522.25 181.46 L 520.52 178.26 L 515.68 177.03 L 514.47 172.32 L 519.92 172.56 L 527.94 168.21 L 531.11 159.70 L 537.44 157.21 L 535.91 153.52 L 531.36 152.51 L 530.23 148.81 L 538.41 135.86 L 545.60 129.71 L 546.95 125.87 L 551.35 125.74 L 556.84 117.10 L 571.68 127.47 L 579.06 134.93 L 582.25 140.79 L 581.73 144.40 L 588.28 145.23 L 594.45 138.97 L 599.59 142.25 L 600.71 148.40 L 611.67 146.76 L 623.16 138.72 L 625.23 128.95 L 632.64 124.18 L 637.29 130.82 L 644.29 133.68 L 648.20 132.59 L 652.77 141.99 L 657.31 141.71 L 664.55 138.20 L 669.67 137.55 L 672.50 132.12 L 679.38 135.75 L 691.08 134.58 L 702.24 129.77 L 704.08 139.03 L 709.79 140.61 L 711.19 133.01 L 718.64 128.12 L 727.70 131.76 L 729.11 129.71 L 735.82 131.51 L 739.70 126.49 L 739.25 121.32 L 745.96 111.11 L 750.51 114.49 L 758.93 116.91 L 770.55 118.19 L 779.45 122.21 L 786.22 122.80 L 782.61 131.24 L 783.36 135.31 L 787.70 138.12 L 793.38 147.34 L 793.52 153.68 L 796.98 157.51 L 793.10 160.24 L 791.09 168.10 L 784.40 172.05 L 789.00 178.65 L 794.16 180.53 L 804.30 187.42 L 805.22 191.93 L 813.79 195.44 L 814.67 203.05 L 820.27 203.00 L 823.56 205.92 L 825.85 215.91 L 830.46 228.14 L 837.66 226.71 L 846.38 221.33 L 849.88 231.22 L 849.97 239.32 L 857.39 247.49 L 863.35 243.10 L 867.43 243.22 L 872.93 238.26 L 875.46 239.01 L 876.88 248.46 L 874.08 257.17 L 880.03 260.52 L 879.03 269.66 L 883.02 271.98 L 889.97 268.92 L 888.84 276.23 L 896.49 276.72 L 909.97 281.71 L 907.01 290.25 L 914.14 293.80 L 917.83 285.17 L 924.18 284.58 L 926.07 292.44 L 924.08 302.14 L 925.05 308.56 L 922.34 310.52 L 917.79 304.83 L 910.91 309.44 L 901.32 310.47 L 894.61 306.83 L 889.24 312.42 L 891.96 315.90 L 905.25 317.88 L 905.63 328.69 L 899.61 331.87 L 891.51 329.03 L 887.81 339.86 L 886.87 347.47 L 893.04 348.58 L 898.51 347.41 L 902.89 348.80 L 904.96 358.51 L 916.54 360.78 L 915.18 378.96 L 920.63 384.20 L 915.83 392.80 L 910.97 395.46 L 905.85 401.73 L 905.06 407.89 L 913.50 414.46 L 910.35 426.91 L 920.46 424.70 L 925.47 419.83 L 931.94 419.25 L 938.11 420.76 L 938.79 427.22 L 950.36 430.75 L 954.55 435.83 L 945.49 442.32 L 932.23 445.94 L 937.41 455.75 L 929.49 455.64 L 924.22 461.86 L 919.09 464.18 L 915.70 468.35 L 918.62 471.99 L 921.84 481.32 L 921.77 485.19 L 912.97 494.31 L 903.93 495.88 L 897.56 492.47 L 893.59 492.53 L 889.77 496.09 L 897.76 505.01 L 902.38 520.75 L 896.22 519.90 L 882.43 527.18 L 885.91 538.07 L 890.24 545.43 L 888.98 554.39 L 886.15 557.11 L 883.98 563.81 L 892.55 565.77 L 893.32 570.32 L 896.97 570.97 L 893.82 586.04 L 888.32 586.41 L 880.25 579.88 L 873.31 583.40 L 871.40 591.06 L 872.42 597.79 L 857.31 597.89 L 848.35 594.72 L 846.55 597.40 L 836.73 594.36 L 829.14 596.26 L 824.66 602.53 L 815.37 599.06 L 802.01 603.18 L 794.72 600.50 L 792.44 595.54 L 787.30 598.06 L 775.28 597.58 L 765.96 601.37 L 759.56 612.66 L 752.85 606.63 L 741.08 607.48 L 736.32 605.73 L 731.14 616.81 L 730.74 627.99 L 721.83 639.83 L 726.72 644.75 L 723.77 649.27 L 727.81 654.23 L 725.73 660.65 L 733.78 663.26 L 735.48 677.84 L 728.54 678.37 L 722.98 687.31 L 723.13 689.54 L 717.19 705.28 L 710.21 704.40 L 703.96 706.66 L 701.84 714.31 L 693.73 716.69 L 686.83 724.12 L 687.51 734.20 L 658.07 738.74 L 654.18 744.67 L 646.49 750.87 L 639.62 753.68 L 637.74 756.22 L 629.12 753.88 L 628.14 742.83 L 633.02 735.56 L 628.28 731.01 L 620.18 731.48 L 615.20 734.05 L 605.56 733.93 L 603.49 736.56 L 608.71 740.84 L 609.41 745.78 L 598.18 750.06 L 588.43 759.38 L 573.64 759.79 L 569.84 761.09 L 562.49 752.08 L 559.63 750.22 L 543.65 755.03 L 532.82 754.64 L 529.80 748.94 L 515.81 749.05 L 508.65 757.76 L 495.20 758.22 L 484.23 756.58 L 478.28 760.27 L 475.34 755.04 L 480.44 752.20 L 490.05 738.54 L 492.14 733.46 L 502.10 738.74 L 506.64 731.96 L 503.58 724.74 L 504.97 714.87 L 509.27 709.95 L 505.46 700.90 L 502.04 685.13 L 493.62 684.10 L 486.05 674.19 L 477.89 677.61 L 470.02 674.28 L 466.50 670.91 L 463.94 659.10 L 466.25 651.96 L 465.21 645.47 L 458.33 635.46 L 457.40 631.46 L 453.52 624.81 L 453.31 621.30 L 467.28 620.66 L 471.50 609.98 L 469.12 604.49 L 478.45 596.05 L 486.10 595.06 L 492.10 589.76 L 488.09 585.90 L 491.88 582.58 L 500.62 584.31 L 508.70 576.46 L 514.29 576.92 L 513.92 572.34 L 506.87 561.75 L 502.68 560.39 L 501.42 553.93 L 501.93 539.75 L 500.19 524.33 L 503.74 521.97 L 506.00 511.48 L 503.26 509.07 L 499.17 497.90 L 504.04 486.23 L 499.80 484.23 L 505.23 476.37 L 508.76 466.57 L 507.26 460.02 L 513.75 456.15 L 516.95 452.02 L 518.25 446.57 L 516.92 441.63 L 510.52 440.52 L 510.95 435.09 L 507.24 431.39 L 511.20 427.29 L 517.66 425.92 L 517.10 415.42 L 513.87 411.64 L 518.70 402.60 L 524.99 401.81 L 536.19 397.23 L 533.34 390.15 L 530.27 388.99 Z"/>
+
+                        <path class="idf-dept idf-inactive" data-dept="91" data-name="Essonne" d="M 381.47 334.08 L 384.24 340.55 L 390.57 343.88 L 395.63 343.94 L 402.37 347.67 L 406.84 352.75 L 402.28 357.60 L 404.64 362.22 L 412.44 358.55 L 414.79 364.52 L 418.87 364.00 L 422.07 351.94 L 436.71 358.59 L 443.04 353.70 L 443.62 370.61 L 450.54 370.73 L 461.01 366.77 L 462.35 372.03 L 473.56 367.17 L 479.94 368.98 L 485.31 365.03 L 490.22 365.73 L 500.90 360.78 L 506.17 364.88 L 508.37 375.42 L 511.99 379.34 L 512.77 383.92 L 517.31 383.70 L 522.60 391.40 L 530.27 388.99 L 533.34 390.15 L 536.19 397.23 L 524.99 401.81 L 518.70 402.60 L 513.87 411.64 L 517.10 415.42 L 517.66 425.92 L 511.20 427.29 L 507.24 431.39 L 510.95 435.09 L 510.52 440.52 L 516.92 441.63 L 518.25 446.57 L 516.95 452.02 L 513.75 456.15 L 507.26 460.02 L 508.76 466.57 L 505.23 476.37 L 499.80 484.23 L 504.04 486.23 L 499.17 497.90 L 503.26 509.07 L 506.00 511.48 L 503.74 521.97 L 500.19 524.33 L 501.93 539.75 L 501.42 553.93 L 502.68 560.39 L 506.87 561.75 L 513.92 572.34 L 514.29 576.92 L 508.70 576.46 L 500.62 584.31 L 491.88 582.58 L 488.09 585.90 L 492.10 589.76 L 486.10 595.06 L 478.45 596.05 L 469.12 604.49 L 471.50 609.98 L 467.28 620.66 L 453.31 621.30 L 453.52 624.81 L 457.40 631.46 L 454.90 635.35 L 443.24 639.32 L 430.45 631.78 L 425.08 623.40 L 418.57 624.87 L 411.16 639.62 L 398.86 635.40 L 393.12 644.83 L 389.49 646.04 L 391.33 635.47 L 386.42 634.30 L 389.99 625.42 L 382.78 625.90 L 380.33 621.21 L 370.99 615.86 L 369.25 620.78 L 363.56 627.73 L 361.98 636.01 L 356.66 636.70 L 350.35 634.60 L 350.92 642.05 L 354.39 646.01 L 342.47 645.48 L 331.47 646.98 L 332.81 640.26 L 329.56 640.00 L 318.92 649.16 L 306.51 647.95 L 305.07 651.68 L 293.63 652.77 L 286.90 654.99 L 281.23 653.75 L 273.13 653.34 L 269.38 647.87 L 266.20 639.32 L 270.60 635.69 L 272.78 629.86 L 276.17 626.50 L 272.98 621.96 L 272.31 610.39 L 278.10 604.41 L 273.57 592.57 L 269.28 591.71 L 273.68 580.09 L 267.37 576.86 L 259.10 575.99 L 253.84 576.99 L 251.82 571.36 L 256.96 562.45 L 259.16 552.86 L 254.94 552.09 L 253.78 544.81 L 250.21 542.07 L 247.71 537.33 L 247.09 531.46 L 255.05 526.04 L 256.53 513.82 L 263.64 498.88 L 269.73 492.79 L 255.35 482.97 L 257.00 473.29 L 263.41 475.55 L 267.84 474.89 L 275.94 478.11 L 283.71 478.21 L 291.36 476.77 L 291.21 469.02 L 299.36 455.12 L 298.66 446.79 L 307.35 443.38 L 309.76 437.59 L 303.56 434.24 L 298.64 427.89 L 299.29 421.71 L 292.41 421.59 L 289.38 417.94 L 288.62 410.05 L 295.94 411.69 L 296.30 407.13 L 300.01 396.70 L 303.47 391.90 L 319.23 393.02 L 320.77 388.66 L 325.98 387.68 L 325.58 381.98 L 331.35 374.39 L 331.71 367.95 L 326.04 361.34 L 332.02 357.95 L 341.98 359.53 L 343.47 353.64 L 348.75 348.70 L 352.99 349.81 L 356.23 346.66 L 362.26 346.18 L 366.71 342.45 L 366.17 334.72 L 374.29 338.59 L 381.47 334.08 Z"/>
+
+                        <!-- Départements actifs -->
+                        <path class="idf-dept idf-active" data-dept="78" data-name="Yvelines"
+                              data-sites="1" data-color="accent"
+                              data-clients="SMDA (Yvelines, divers chantiers)"
+                              tabindex="0" role="button" aria-label="Yvelines, 1 site d'intervention"
+                              d="M 370.27 247.51 L 359.89 252.95 L 356.13 256.82 L 349.70 270.59 L 349.84 286.57 L 346.68 294.95 L 349.14 307.36 L 353.01 309.96 L 359.96 309.46 L 362.99 320.28 L 371.16 319.52 L 374.98 326.22 L 380.07 327.66 L 381.47 334.08 L 374.29 338.59 L 366.17 334.72 L 366.71 342.45 L 362.26 346.18 L 356.23 346.66 L 352.99 349.81 L 348.75 348.70 L 343.47 353.64 L 341.98 359.53 L 332.02 357.95 L 326.04 361.34 L 331.71 367.95 L 331.35 374.39 L 325.58 381.98 L 325.98 387.68 L 320.77 388.66 L 319.23 393.02 L 303.47 391.90 L 300.01 396.70 L 296.30 407.13 L 295.94 411.69 L 288.62 410.05 L 289.38 417.94 L 292.41 421.59 L 299.29 421.71 L 298.64 427.89 L 303.56 434.24 L 309.76 437.59 L 307.35 443.38 L 298.66 446.79 L 299.36 455.12 L 291.21 469.02 L 291.36 476.77 L 283.71 478.21 L 275.94 478.11 L 267.84 474.89 L 263.41 475.55 L 257.00 473.29 L 255.35 482.97 L 269.73 492.79 L 263.64 498.88 L 256.53 513.82 L 255.05 526.04 L 247.09 531.46 L 247.71 537.33 L 250.21 542.07 L 249.60 548.50 L 243.49 549.86 L 243.42 553.47 L 230.95 553.16 L 216.89 547.45 L 213.23 536.27 L 198.17 536.53 L 195.96 524.71 L 191.38 520.95 L 193.50 516.10 L 188.32 509.07 L 187.09 496.29 L 192.04 479.29 L 183.49 475.59 L 182.59 469.08 L 174.20 464.66 L 170.30 467.18 L 158.41 463.43 L 155.28 458.88 L 162.12 444.61 L 160.85 439.68 L 149.86 441.55 L 145.52 437.01 L 139.86 440.13 L 135.60 434.68 L 136.41 431.03 L 132.67 428.01 L 133.54 424.18 L 128.98 420.75 L 129.93 415.59 L 124.17 417.16 L 118.04 414.61 L 112.38 407.44 L 113.83 397.65 L 116.38 390.65 L 103.68 386.15 L 102.48 382.60 L 109.10 377.70 L 106.79 375.64 L 118.98 360.31 L 122.69 352.37 L 112.46 344.28 L 104.79 342.44 L 105.96 335.71 L 102.85 333.13 L 100.81 324.68 L 104.16 313.80 L 107.51 308.77 L 104.29 297.49 L 108.79 296.13 L 109.23 292.55 L 101.50 289.51 L 103.37 282.56 L 101.83 278.73 L 96.92 275.26 L 91.99 275.98 L 88.12 271.18 L 93.84 264.89 L 92.87 258.68 L 84.80 248.81 L 86.21 243.07 L 84.84 238.94 L 78.58 237.01 L 73.75 238.43 L 72.07 229.26 L 68.84 226.37 L 68.64 218.77 L 66.72 207.89 L 74.89 203.28 L 71.59 198.47 L 67.07 201.23 L 58.31 201.72 L 55.51 204.00 L 51.33 196.73 L 59.02 188.60 L 56.19 175.80 L 49.97 170.70 L 50.05 165.13 L 45.52 158.36 L 45.45 152.93 L 51.28 146.90 L 61.66 154.21 L 69.61 149.28 L 73.19 139.46 L 77.57 143.11 L 89.52 140.49 L 92.79 142.41 L 100.41 136.65 L 113.24 133.65 L 115.10 137.01 L 117.41 141.22 L 123.92 136.75 L 129.81 134.81 L 137.28 134.92 L 143.08 136.84 L 153.18 144.80 L 152.23 151.09 L 161.80 155.85 L 164.53 158.50 L 169.79 156.08 L 176.49 156.38 L 176.08 152.54 L 180.13 146.52 L 187.95 150.92 L 195.02 149.67 L 197.47 145.72 L 196.05 140.70 L 207.87 138.01 L 215.07 142.60 L 215.56 145.65 L 225.77 150.34 L 223.68 157.61 L 219.96 164.88 L 227.34 175.96 L 232.85 175.11 L 233.42 165.98 L 244.33 156.51 L 256.96 173.65 L 264.35 171.85 L 272.59 175.19 L 280.28 174.15 L 290.00 187.18 L 294.46 188.68 L 305.28 185.78 L 311.56 182.51 L 316.31 186.40 L 320.39 178.29 L 331.32 182.17 L 336.06 175.90 L 338.59 181.55 L 335.83 192.25 L 338.53 194.96 L 350.59 197.19 L 358.50 203.78 L 360.66 211.29 L 358.61 218.46 L 372.55 220.69 L 372.61 226.72 L 369.56 230.15 L 371.61 243.78 L 370.27 247.51 Z"/>
+
+                        <path class="idf-dept idf-active" data-dept="92" data-name="Hauts-de-Seine"
+                              data-sites="13" data-color="secondary"
+                              data-clients="SEQENS Marché 92 · GHT 92 (Hôpital Stell, IFSI, EHPAD) · Geniez Immobilier · SMDA Rueil-Malmaison"
+                              tabindex="0" role="button" aria-label="Hauts-de-Seine, 13 sites d'intervention"
+                              d="M 409.24 219.89 L 424.77 223.55 L 428.47 226.61 L 428.81 232.05 L 421.68 242.77 L 419.07 244.02 L 421.71 252.87 L 409.47 260.05 L 403.43 267.56 L 395.23 265.98 L 383.70 273.37 L 380.46 283.53 L 391.84 288.73 L 393.80 295.75 L 401.41 300.24 L 404.10 297.26 L 409.77 300.75 L 426.89 307.37 L 421.20 326.31 L 424.27 330.29 L 417.54 346.59 L 422.07 351.94 L 418.87 364.00 L 414.79 364.52 L 412.44 358.55 L 404.64 362.22 L 402.28 357.60 L 406.84 352.75 L 402.37 347.67 L 395.63 343.94 L 390.57 343.88 L 384.24 340.55 L 381.47 334.08 L 380.07 327.66 L 374.98 326.22 L 371.16 319.52 L 362.99 320.28 L 359.96 309.46 L 353.01 309.96 L 349.14 307.36 L 346.68 294.95 L 349.84 286.57 L 349.70 270.59 L 356.13 256.82 L 359.89 252.95 L 370.27 247.51 L 383.45 235.06 L 399.65 222.76 L 409.24 219.89 Z"/>
+
+                        <path class="idf-dept idf-active" data-dept="93" data-name="Seine-Saint-Denis"
+                              data-sites="7" data-color="secondary"
+                              data-clients="Lamy Immobilière (Microforêt — La Courneuve) · SEQENS Marché 93 (Les Lilas, Le Pré-Saint-Gervais)"
+                              tabindex="0" role="button" aria-label="Seine-Saint-Denis, 7 sites d'intervention"
+                              d="M 522.25 181.46 L 527.74 179.78 L 530.28 187.98 L 534.01 193.36 L 533.78 197.68 L 526.73 202.41 L 537.88 218.07 L 543.62 234.00 L 538.48 237.92 L 538.73 248.71 L 535.52 256.17 L 526.38 260.43 L 524.99 262.75 L 529.66 268.54 L 528.74 275.41 L 537.03 276.03 L 535.22 281.12 L 531.21 283.61 L 539.27 301.58 L 540.97 311.37 L 539.16 313.62 L 531.34 310.04 L 529.98 303.67 L 512.88 289.46 L 497.50 278.74 L 491.41 278.38 L 476.80 284.46 L 463.30 286.33 L 461.98 270.88 L 455.76 261.59 L 454.06 254.19 L 449.85 251.86 L 421.71 252.87 L 419.07 244.02 L 421.68 242.77 L 428.81 232.05 L 428.47 226.61 L 424.77 223.55 L 409.24 219.89 L 408.07 215.07 L 412.69 209.88 L 415.77 212.28 L 425.09 214.22 L 436.28 210.20 L 441.79 204.73 L 449.59 206.81 L 453.81 212.32 L 459.44 216.52 L 468.01 214.50 L 481.91 217.23 L 485.29 211.16 L 497.65 205.69 L 499.55 202.43 L 505.74 199.46 L 507.29 194.75 L 513.28 184.46 L 519.98 184.69 L 522.25 181.46 Z"/>
+
+                        <path class="idf-dept idf-active" data-dept="94" data-name="Val-de-Marne"
+                              data-sites="4" data-color="secondary"
+                              data-clients="Valophis Habitat (4 sites en Val-de-Marne)"
+                              tabindex="0" role="button" aria-label="Val-de-Marne, 4 sites d'intervention"
+                              d="M 426.89 307.37 L 440.71 307.82 L 452.35 301.45 L 458.86 300.44 L 472.83 306.57 L 483.29 306.03 L 485.40 296.84 L 483.61 290.99 L 476.82 289.21 L 468.39 291.36 L 465.80 295.10 L 461.54 295.92 L 463.30 286.33 L 476.80 284.46 L 491.41 278.38 L 497.50 278.74 L 512.88 289.46 L 529.98 303.67 L 531.34 310.04 L 539.16 313.62 L 538.97 319.69 L 542.39 321.76 L 536.29 332.43 L 539.03 337.15 L 545.51 335.19 L 548.38 343.93 L 541.76 344.28 L 543.50 348.69 L 536.38 356.69 L 540.20 363.01 L 536.12 365.99 L 529.04 379.06 L 531.81 383.54 L 530.27 388.99 L 522.60 391.40 L 517.31 383.70 L 512.77 383.92 L 511.99 379.34 L 508.37 375.42 L 506.17 364.88 L 500.90 360.78 L 490.22 365.73 L 485.31 365.03 L 479.94 368.98 L 473.56 367.17 L 462.35 372.03 L 461.01 366.77 L 450.54 370.73 L 443.62 370.61 L 443.04 353.70 L 436.71 358.59 L 422.07 351.94 L 417.54 346.59 L 424.27 330.29 L 421.20 326.31 L 426.89 307.37 Z"/>
+
+                        <path class="idf-dept idf-active idf-paris" data-dept="75" data-name="Paris"
+                              data-sites="73" data-color="primary"
+                              data-clients="SNCF Gares &amp; Connexions · Paris Habitat · Ville de Paris · IMMO 3F · Mairie du 9ᵉ"
+                              tabindex="0" role="button" aria-label="Paris, 73 sites d'intervention"
+                              d="M 421.71 252.87 L 449.85 251.86 L 454.06 254.19 L 455.76 261.59 L 461.98 270.88 L 463.30 286.33 L 461.54 295.92 L 465.80 295.10 L 468.39 291.36 L 476.82 289.21 L 483.61 290.99 L 485.40 296.84 L 483.29 306.03 L 472.83 306.57 L 458.86 300.44 L 452.35 301.45 L 440.71 307.82 L 426.89 307.37 L 409.77 300.75 L 404.10 297.26 L 401.41 300.24 L 393.80 295.75 L 391.84 288.73 L 380.46 283.53 L 383.70 273.37 L 395.23 265.98 L 403.43 267.56 L 409.47 260.05 L 421.71 252.87 Z"/>
+
+                        <!-- Labels (au-dessus des polygones) -->
+                        <text class="idf-label idf-label-inactive" x="306.75" y="131.87">95</text>
+                        <text class="idf-label idf-label-inactive" x="653.93" y="396.10">77</text>
+                        <text class="idf-label idf-label-inactive" x="381.64" y="494.53">91</text>
+                        <text class="idf-label idf-label-active" x="183.46" y="343.56">78</text>
+                        <text class="idf-label idf-label-active idf-label-93" x="475.00" y="240.00">93</text>
+                        <text class="idf-label idf-label-active idf-label-92" x="365.00" y="290.00">92</text>
+                        <text class="idf-label idf-label-active idf-label-paris" x="432.00" y="280.00">75</text>
+                        <text class="idf-label idf-label-active idf-label-94" x="485.00" y="340.00">94</text>
+                    </svg>
+
+                    <!-- Tooltip flottante (positionnée en JS) -->
+                    <div class="idf-tooltip" id="idf-tooltip" role="tooltip" aria-hidden="true"></div>
+                </div>
+
+                <!-- Cartes département -->
+                <div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="card-hover-premium bg-white border border-[var(--primary)]/30 rounded-xl p-5 flex items-center gap-4 shadow-sm">
+                            <div class="card-icon w-14 h-14 rounded-lg bg-[var(--primary)] text-white grid place-items-center p-0 leading-none shrink-0"><span class="block leading-none m-0 p-0 font-bold text-xl tabular-nums translate-y-[1px]">75</span></div>
+                            <div>
+                                <div class="font-bold text-slate-900">Paris</div>
+                                <div class="text-sm text-slate-500"><strong class="text-[var(--primary)]">73</strong> sites</div>
+                            </div>
+                        </div>
+
+                        <div class="card-hover-premium bg-white border border-[var(--secondary)]/30 rounded-xl p-5 flex items-center gap-4 shadow-sm">
+                            <div class="card-icon w-14 h-14 rounded-lg bg-[var(--secondary)] text-white grid place-items-center p-0 leading-none shrink-0"><span class="block leading-none m-0 p-0 font-bold text-xl tabular-nums translate-y-[1px]">92</span></div>
+                            <div>
+                                <div class="font-bold text-slate-900">Hauts-de-Seine</div>
+                                <div class="text-sm text-slate-500"><strong class="text-[var(--secondary)]">13</strong> sites</div>
+                            </div>
+                        </div>
+
+                        <div class="card-hover-premium bg-white border border-[var(--secondary)]/30 rounded-xl p-5 flex items-center gap-4 shadow-sm">
+                            <div class="card-icon w-14 h-14 rounded-lg bg-[var(--secondary)] text-white grid place-items-center p-0 leading-none shrink-0"><span class="block leading-none m-0 p-0 font-bold text-xl tabular-nums translate-y-[1px]">93</span></div>
+                            <div>
+                                <div class="font-bold text-slate-900">Seine-Saint-Denis</div>
+                                <div class="text-sm text-slate-500"><strong class="text-[var(--secondary)]">7</strong> sites</div>
+                            </div>
+                        </div>
+
+                        <div class="card-hover-premium bg-white border border-[var(--secondary)]/30 rounded-xl p-5 flex items-center gap-4 shadow-sm">
+                            <div class="card-icon w-14 h-14 rounded-lg bg-[var(--secondary)] text-white grid place-items-center p-0 leading-none shrink-0"><span class="block leading-none m-0 p-0 font-bold text-xl tabular-nums translate-y-[1px]">94</span></div>
+                            <div>
+                                <div class="font-bold text-slate-900">Val-de-Marne</div>
+                                <div class="text-sm text-slate-500"><strong class="text-[var(--secondary)]">4</strong> sites</div>
+                            </div>
+                        </div>
+
+                        <div class="card-hover-premium bg-white border border-[var(--accent)]/30 rounded-xl p-5 flex items-center gap-4 shadow-sm sm:col-span-2">
+                            <div class="card-icon w-14 h-14 rounded-lg bg-[var(--accent)] text-white grid place-items-center p-0 leading-none shrink-0"><span class="block leading-none m-0 p-0 font-bold text-xl tabular-nums translate-y-[1px]">78</span></div>
+                            <div>
+                                <div class="font-bold text-slate-900">Yvelines</div>
+                                <div class="text-sm text-slate-500"><strong class="text-[var(--accent)]">1</strong> site</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7 : Expertise / Valeurs -->
+    <section class="py-24 px-6 max-w-7xl mx-auto reveal">
+        <div class="grid lg:grid-cols-2 gap-20">
+            <div>
+                <h2 class="font-display text-4xl font-bold mb-12 text-[var(--secondary)]">Notre Expertise</h2>
+                <div class="space-y-8">
+                    <div class="card-hover-premium bg-white p-6 rounded-2xl border border-slate-100 flex gap-6 items-start">
+                        <div class="w-14 h-14 bg-[var(--primary)]/10 text-[var(--primary)] rounded-xl flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-3xl card-icon">park</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Aménagement des espaces verts</h3>
+                            <p class="text-slate-600">Création sur mesure, plantations et mise en valeur des patrimoines paysagers.</p>
+                        </div>
+                    </div>
+                    <div class="card-hover-premium bg-white p-6 rounded-2xl border border-slate-100 flex gap-6 items-start">
+                        <div class="w-14 h-14 bg-[var(--secondary)]/10 text-[var(--secondary)] rounded-xl flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-3xl card-icon">content_cut</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Entretien des espaces verts</h3>
+                            <p class="text-slate-600">Taille, tonte, et suivi rigoureux pour la pérennité de vos jardins.</p>
+                        </div>
+                    </div>
+                    <div class="card-hover-premium bg-white p-6 rounded-2xl border border-slate-100 flex gap-6 items-start">
+                        <div class="w-14 h-14 bg-[var(--accent)]/10 text-[var(--accent)] rounded-xl flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-3xl card-icon">nature</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Gestion différenciée</h3>
+                            <p class="text-slate-600">Pratiques écologiques respectant les rythmes biologiques et la biodiversité.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="font-display text-4xl font-bold mb-12 text-[var(--secondary)]">Nos Valeurs</h2>
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="card-hover-premium p-8 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-center gap-6">
+                        <span class="material-symbols-outlined text-4xl text-[var(--primary)] card-icon">handshake</span>
+                        <span class="text-xl font-semibold">Insertion professionnelle</span>
+                    </div>
+                    <div class="card-hover-premium p-8 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-center gap-6">
+                        <span class="material-symbols-outlined text-4xl text-[var(--secondary)] card-icon">filter_vintage</span>
+                        <span class="text-xl font-semibold">Maintien de la biodiversité</span>
+                    </div>
+                    <div class="card-hover-premium p-8 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-center gap-6">
+                        <span class="material-symbols-outlined text-4xl text-[var(--accent)] card-icon">energy_savings_leaf</span>
+                        <span class="text-xl font-semibold">En route vers la décarbonation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bloc B : Notre équipe / Organigramme -->
+    <section id="equipe" class="bg-[var(--secondary)]/5 border-y border-slate-100 py-20 px-6 reveal scroll-mt-24">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-[var(--secondary)] mb-3">Notre équipe</h2>
+                <p class="text-slate-500 uppercase tracking-[0.2em] text-xs md:text-sm font-semibold">Une organisation au service de l'insertion</p>
+            </div>
+
+            <!-- Organigramme 3 niveaux + connecteurs visuels -->
+            <div class="org-chart" data-stagger>
+                <!-- Niveau 1 : Co-gérance -->
+                <div class="org-level">
+                    <article class="org-card stagger-item" style="--d:0ms">
+                        <span class="org-avatar material-symbols-outlined" aria-hidden="true">account_circle</span>
+                        <div class="org-name">Yann FRADIN</div>
+                        <div class="org-role">Co-gérant</div>
+                    </article>
+                    <article class="org-card stagger-item" style="--d:80ms">
+                        <span class="org-avatar material-symbols-outlined" aria-hidden="true">account_circle</span>
+                        <div class="org-name">Christophe VEZINE</div>
+                        <div class="org-role">Co-gérant</div>
+                    </article>
+                </div>
+
+                <div class="org-connector" aria-hidden="true"></div>
+
+                <!-- Niveau 2 : Direction opérationnelle -->
+                <div class="org-level org-level-multi">
+                    <article class="org-card stagger-item" style="--d:160ms">
+                        <span class="org-avatar material-symbols-outlined" aria-hidden="true">account_circle</span>
+                        <div class="org-name">Bassem GASTLI</div>
+                        <div class="org-role">Directeur opérationnel</div>
+                    </article>
+                    <article class="org-card org-card--todo stagger-item" style="--d:240ms">
+                        <span class="org-avatar material-symbols-outlined" aria-hidden="true">person_add</span>
+                        <div class="org-name org-name--todo">[À COMPLÉTER]</div>
+                        <div class="org-role">Responsable d'exploitation / encadrement technique</div>
+                    </article>
+                    <article class="org-card org-card--todo stagger-item" style="--d:320ms">
+                        <span class="org-avatar material-symbols-outlined" aria-hidden="true">person_add</span>
+                        <div class="org-name org-name--todo">[À COMPLÉTER]</div>
+                        <div class="org-role">Chargé·e d'accompagnement socio-professionnel</div>
+                    </article>
+                </div>
+
+                <div class="org-connector" aria-hidden="true"></div>
+
+                <!-- Niveau 3 : Équipes terrain -->
+                <div class="org-level">
+                    <article class="org-card org-card--wide stagger-item" style="--d:400ms">
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-4xl text-[var(--secondary)] shrink-0" aria-hidden="true">groups</span>
+                                <div class="text-left">
+                                    <div class="text-2xl font-bold text-slate-900">100 ouvrier·es paysagistes</div>
+                                    <div class="text-sm text-slate-500">accompagné·es en parcours d'insertion depuis 2013</div>
+                                </div>
+                            </div>
+                            <div class="hidden sm:block w-px h-12 bg-slate-200"></div>
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-4xl text-[var(--accent)] shrink-0" aria-hidden="true">badge</span>
+                                <div class="text-left">
+                                    <div class="text-2xl font-bold text-slate-900">15 salarié·es permanents</div>
+                                    <div class="text-sm text-slate-500">en 2025</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bloc G : Notre expertise par typologie de client -->
+    <section id="expertise-clients" class="py-24 px-6 reveal scroll-mt-24">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-4">
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-[var(--secondary)] mb-3">Notre expertise par typologie de client</h2>
+                <p class="text-slate-500 uppercase tracking-[0.2em] text-xs md:text-sm font-semibold mb-16">Survolez une carte pour afficher les références</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <article class="client-card card-hover-premium bg-white rounded-2xl p-7 shadow-sm border border-slate-100" tabindex="0">
+                    <div class="w-14 h-14 bg-[var(--secondary)]/10 text-[var(--secondary)] rounded-xl flex items-center justify-center mb-5"><span class="material-symbols-outlined text-3xl card-icon" aria-hidden="true">apartment</span></div>
+                    <h3 class="font-display text-xl font-bold text-slate-900 mb-1">Bailleurs sociaux</h3>
+                    <p class="text-sm font-semibold text-[var(--secondary)] mb-3">77 sites · 6 clients</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Gestion patrimoniale d'espaces verts à grande échelle. Maîtrise des marchés cadres et des bons de commande. Continuité de service sur le long terme.</p>
+                    <div class="client-refs"><p class="text-xs text-slate-500 italic border-t border-slate-100 pt-3 m-0"><strong class="text-[var(--secondary)] not-italic">Références :</strong> IMMO 3F · Paris Habitat · SEQENS · Valophis Habitat</p></div>
+                </article>
+
+                <article class="client-card card-hover-premium bg-white rounded-2xl p-7 shadow-sm border border-slate-100" tabindex="0">
+                    <div class="w-14 h-14 bg-[var(--accent)]/15 text-[var(--accent)] rounded-xl flex items-center justify-center mb-5"><span class="material-symbols-outlined text-3xl card-icon" aria-hidden="true">domain</span></div>
+                    <h3 class="font-display text-xl font-bold text-slate-900 mb-1">Copropriétés &amp; syndics</h3>
+                    <p class="text-sm font-semibold text-[var(--accent)] mb-3">7 sites · 6 clients</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Interlocuteur unique pour le syndic. Souplesse contractuelle. Qualité de prestation pour les résidences haut de gamme et les copropriétés mixtes.</p>
+                    <div class="client-refs"><p class="text-xs text-slate-500 italic border-t border-slate-100 pt-3 m-0"><strong class="text-[var(--secondary)] not-italic">Références :</strong> Daumesnil Gestion · Lamy Immobilière · Foncia (Geniez Immobilier)</p></div>
+                </article>
+
+                <article class="client-card card-hover-premium bg-white rounded-2xl p-7 shadow-sm border border-slate-100" tabindex="0">
+                    <div class="w-14 h-14 bg-[var(--primary)]/10 text-[var(--primary)] rounded-xl flex items-center justify-center mb-5"><span class="material-symbols-outlined text-3xl card-icon" aria-hidden="true">account_balance</span></div>
+                    <h3 class="font-display text-xl font-bold text-slate-900 mb-1">Marchés publics</h3>
+                    <p class="text-sm font-semibold text-[var(--primary)] mb-3">7 sites · 4 clients</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Maîtrise des procédures de la commande publique. Référencement sur les marchés réservés (article L. 2113-13) et les marchés à clause sociale d'insertion.</p>
+                    <div class="client-refs"><p class="text-xs text-slate-500 italic border-t border-slate-100 pt-3 m-0"><strong class="text-[var(--secondary)] not-italic">Références :</strong> Ville de Paris · Mairie du 9e · GHT 92 · SNCF Gares &amp; Connexions</p></div>
+                </article>
+
+                <article class="client-card card-hover-premium bg-white rounded-2xl p-7 shadow-sm border border-slate-100" tabindex="0">
+                    <div class="w-14 h-14 bg-[var(--secondary)]/10 text-[var(--secondary)] rounded-xl flex items-center justify-center mb-5"><span class="material-symbols-outlined text-3xl card-icon" aria-hidden="true">business_center</span></div>
+                    <h3 class="font-display text-xl font-bold text-slate-900 mb-1">Entreprises &amp; ESS</h3>
+                    <p class="text-sm font-semibold text-[var(--secondary)] mb-3">3 sites · 3 clients</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Flexibilité opérationnelle. Réactivité sur sites multiples. Co-traitance et sous-traitance possibles.</p>
+                    <div class="client-refs"><p class="text-xs text-slate-500 italic border-t border-slate-100 pt-3 m-0"><strong class="text-[var(--secondary)] not-italic">Références :</strong> SMDA · SCI des SCOP &amp; SCIC</p></div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8 : Références emblématiques -->
+    <section id="references" class="py-24 px-6 bg-[var(--secondary)]/5 border-y border-slate-100 reveal scroll-mt-24">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-center font-display text-3xl md:text-4xl font-bold text-[var(--secondary)] mb-4">
+                Références emblématiques
+            </h2>
+            <p class="text-center text-slate-500 uppercase tracking-[0.2em] text-xs md:text-sm mb-16 font-semibold">
+                Quelques chantiers signature
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
+                <article class="card-hover-premium bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+                    <div class="flex items-start gap-5">
+                        <div class="w-16 h-16 bg-[var(--accent)]/10 text-[var(--accent)] rounded-xl flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-4xl card-icon">forest</span>
+                        </div>
+                        <div>
+                            <div class="text-xs font-bold uppercase tracking-wider text-[var(--accent)] mb-2">Innovation écologique</div>
+                            <h3 class="font-display text-2xl font-bold text-slate-900 mb-2">Microforêt urbaine</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-3">
+                                Création d'une microforêt selon la méthode Miyawaki, 28 rue Honoré de Balzac à La Courneuve (93). Densité élevée d'essences locales pour reconstituer un écosystème forestier en milieu urbain.
+                            </p>
+                            <p class="text-xs text-slate-400 italic">Client : Lamy Immobilière · Contrat direct</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-hover-premium bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+                    <div class="flex items-start gap-5">
+                        <div class="w-16 h-16 bg-[var(--primary)]/10 text-[var(--primary)] rounded-xl flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-4xl card-icon">train</span>
+                        </div>
+                        <div>
+                            <div class="text-xs font-bold uppercase tracking-wider text-[var(--primary)] mb-2">Grandes gares parisiennes</div>
+                            <h3 class="font-display text-2xl font-bold text-slate-900 mb-2">SNCF Gares &amp; Connexions</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-3">
+                                Entretien des espaces végétalisés de la Gare de l'Est et de la Gare d'Austerlitz. Intervention sur sites à très forte affluence, exigeant rigueur, ponctualité et coordination avec l'exploitation ferroviaire.
+                            </p>
+                            <p class="text-xs text-slate-400 italic">Client : SNCF Gares &amp; Connexions · Marché réservé · Contrat direct</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-hover-premium bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+                    <div class="flex items-start gap-5">
+                        <div class="w-16 h-16 bg-[var(--secondary)]/10 text-[var(--secondary)] rounded-xl flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-4xl card-icon">local_hospital</span>
+                        </div>
+                        <div>
+                            <div class="text-xs font-bold uppercase tracking-wider text-[var(--secondary)] mb-2">Sites de santé</div>
+                            <h3 class="font-display text-2xl font-bold text-slate-900 mb-2">GHT 92 — Hôpital, IFSI &amp; EHPAD</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-3">
+                                Aménagement et entretien des espaces verts de l'Hôpital Stell, de l'IFSI et de l'EHPAD du Groupement Hospitalier de Territoire des Hauts-de-Seine. Un cadre apaisant au service du soin et du bien-être des patients.
+                            </p>
+                            <p class="text-xs text-slate-400 italic">Client : GHT 92 · Marché réservé · Contrat direct</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card-hover-premium bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+                    <div class="flex items-start gap-5">
+                        <div class="w-16 h-16 bg-[var(--accent)]/10 text-[var(--accent)] rounded-xl flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-4xl card-icon">park</span>
+                        </div>
+                        <div>
+                            <div class="text-xs font-bold uppercase tracking-wider text-[var(--accent)] mb-2">Biodiversité urbaine</div>
+                            <h3 class="font-display text-2xl font-bold text-slate-900 mb-2">Ville de Paris — Permis de végétaliser</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-3">
+                                Création et entretien de fosses d'arbres et de pieds d'arbres végétalisés à Paris, dans le cadre du dispositif « Permis de végétaliser » porté par la Ville. Une contribution directe au rafraîchissement et à la biodiversité urbaine.
+                            </p>
+                            <p class="text-xs text-slate-400 italic">Client : Ville de Paris · Contrat direct</p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9 : Nous ont fait confiance (5 catégories) -->
+    <section class="py-24 px-6 bg-white reveal">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-center font-display text-3xl md:text-4xl font-bold text-[var(--secondary)] mb-4">
+                Nous ont fait confiance
+            </h2>
+            <p class="text-center text-slate-500 uppercase tracking-[0.2em] text-xs md:text-sm mb-16 font-semibold">
+                Portefeuille 2025-2026 · 5 typologies de clients
+            </p>
+
+            <div class="space-y-14">
+
+                <div>
+                    <div class="flex items-center gap-4 mb-6 pb-3 border-b-2 border-[var(--secondary)]/20">
+                        <span class="material-symbols-outlined text-3xl text-[var(--secondary)]" aria-hidden="true">apartment</span>
+                        <div>
+                            <h3 class="font-display text-xl md:text-2xl font-bold text-slate-900">Bailleurs sociaux</h3>
+                            <p class="text-sm text-slate-500"><strong class="text-[var(--secondary)]">77 sites</strong> · 6 clients</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 md:gap-6">
+                        <div class="logo-frame"><img src="assets/images/references/immo3f.jpg" alt="IMMO 3F" loading="lazy" /></div>
+                        <div class="logo-frame"><img src="assets/images/references/paris-habitat.png" alt="Paris Habitat" loading="lazy" /></div>
+                        <div class="logo-frame"><img src="assets/images/references/seqens.jpg" alt="SEQENS" loading="lazy" /></div>
+                        <div class="logo-frame"><img src="assets/images/references/valophis-habitat.jpg" alt="Valophis Habitat" loading="lazy" /></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center gap-4 mb-6 pb-3 border-b-2 border-[var(--primary)]/20">
+                        <span class="material-symbols-outlined text-3xl text-[var(--primary)]" aria-hidden="true">account_balance</span>
+                        <div>
+                            <h3 class="font-display text-xl md:text-2xl font-bold text-slate-900">Marchés publics</h3>
+                            <p class="text-sm text-slate-500"><strong class="text-[var(--primary)]">7 sites</strong> · 4 clients</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 md:gap-6">
+                        <div class="logo-frame"><img src="assets/images/references/ville-de-paris.jpg" alt="Ville de Paris" loading="lazy" /></div>
+                        <div class="logo-frame"><img src="assets/images/references/mairie-paris-9e.svg" alt="Mairie du 9e arrondissement de Paris" loading="lazy" /></div>
+                        <div class="logo-frame"><img src="assets/images/references/ght-92.png" alt="GHT 92" loading="lazy" /></div>
+                        <div class="logo-frame"><img src="assets/images/references/sncf-gares-connexions.png" alt="SNCF Gares &amp; Connexions" loading="lazy" /></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center gap-4 mb-6 pb-3 border-b-2 border-[var(--accent)]/30">
+                        <span class="material-symbols-outlined text-3xl text-[var(--accent)]" aria-hidden="true">domain</span>
+                        <div>
+                            <h3 class="font-display text-xl md:text-2xl font-bold text-slate-900">Copropriétés &amp; syndics</h3>
+                            <p class="text-sm text-slate-500"><strong class="text-[var(--accent)]">7 sites</strong> · 6 clients</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6">
+                        <div class="logo-frame"><img src="assets/images/references/daumesnil-gestion.webp" alt="Daumesnil Gestion" loading="lazy" /></div>
+                        <div class="logo-frame"><img src="assets/images/references/lamy-immobilier.jpeg" alt="Lamy Immobilière" loading="lazy" /></div>
+                        <div class="logo-frame"><img src="assets/images/references/foncia-geniez-immobilier.jpg" alt="Foncia — Geniez Immobilier" loading="lazy" /></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center gap-4 mb-6 pb-3 border-b-2 border-[var(--secondary)]/20">
+                        <span class="material-symbols-outlined text-3xl text-[var(--secondary)]" aria-hidden="true">business_center</span>
+                        <div>
+                            <h3 class="font-display text-xl md:text-2xl font-bold text-slate-900">Entreprises</h3>
+                            <p class="text-sm text-slate-500"><strong class="text-[var(--secondary)]">2 sites</strong> · 2 clients · sous-traitance avec clause sociale</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-500 text-sm italic pl-1">
+                        Interventions dans le cadre de marchés portés par notre partenaire SMDA, sur les Hauts-de-Seine (Rueil-Malmaison) et les Yvelines.
+                    </p>
+                </div>
+
+                <div>
+                    <div class="flex items-center gap-4 mb-6 pb-3 border-b-2 border-[var(--accent)]/30">
+                        <span class="material-symbols-outlined text-3xl text-[var(--accent)]" aria-hidden="true">handshake</span>
+                        <div>
+                            <h3 class="font-display text-xl md:text-2xl font-bold text-slate-900">Associations &amp; Économie Sociale et Solidaire</h3>
+                            <p class="text-sm text-slate-500"><strong class="text-[var(--accent)]">1 site</strong> · 1 client</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-500 text-sm italic pl-1">
+                        Entretien du siège de la SCI des SCOP &amp; SCIC, Paris 17ᵉ — au service des organisations coopératives.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="mt-16 text-center">
+                <a
+                    href="assets/cartographie-naturespaces-2025-2026.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-3 bg-white border-2 border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--secondary)] hover:text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold transition-colors shadow-sm"
+                >
+                    <span class="material-symbols-outlined" aria-hidden="true">file_download</span>
+                    Télécharger la cartographie complète 2025-2026 (PDF)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10 : Partenaires stratégiques (marquee) -->
+    <section class="py-20 px-2 sm:px-6 bg-slate-50 border-t border-slate-100 reveal">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-center text-slate-500 uppercase tracking-[0.3em] text-sm mb-12 font-bold">Partenaires stratégiques</h3>
+            <div class="marquee-container">
+                <div class="marquee-track">
+                    <div class="marquee-item logo-frame w-40 md:w-44"><img src="assets/images/references/unep.png" alt="UNEP" loading="lazy" /></div>
+                    <div class="marquee-item logo-frame w-40 md:w-44"><img src="assets/images/references/ocapiat.png" alt="OCAPIAT" loading="lazy" /></div>
+                    <div class="marquee-item logo-frame w-40 md:w-44"><img src="assets/images/references/smda.jpg" alt="SMDA" loading="lazy" /></div>
+                    <div class="marquee-item logo-frame w-40 md:w-44"><img src="assets/images/references/les-scop.png" alt="Les SCOP" loading="lazy" /></div>
+                    <div class="marquee-item logo-frame w-40 md:w-44"><img src="assets/images/references/drieets-idf.png" alt="DRIEETS Île-de-France" loading="lazy" /></div>
+                    <div class="marquee-item logo-frame w-40 md:w-44"><img src="assets/images/references/association-espaces.png" alt="Association Espaces" loading="lazy" /></div>
+                    <!-- Duplication pour boucle fluide -->
+                    <div class="marquee-item logo-frame w-40 md:w-44" aria-hidden="true"><img src="assets/images/references/unep.png" alt="" loading="lazy" /></div>
+                    <div class="marquee-item logo-frame w-40 md:w-44" aria-hidden="true"><img src="assets/images/references/ocapiat.png" alt="" loading="lazy" /></div>
+                    <div class="marquee-item logo-frame w-40 md:w-44" aria-hidden="true"><img src="assets/images/references/smda.jpg" alt="" loading="lazy" /></div>
+                    <div class="marquee-item logo-frame w-40 md:w-44" aria-hidden="true"><img src="assets/images/references/les-scop.png" alt="" loading="lazy" /></div>
+                    <div class="marquee-item logo-frame w-40 md:w-44" aria-hidden="true"><img src="assets/images/references/drieets-idf.png" alt="" loading="lazy" /></div>
+                    <div class="marquee-item logo-frame w-40 md:w-44" aria-hidden="true"><img src="assets/images/references/association-espaces.png" alt="" loading="lazy" /></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bloc E : Pourquoi NaturEspaces ? -->
+    <section id="pourquoi-naturespaces" class="bg-[var(--secondary)]/5 border-y border-slate-100 py-24 px-6 reveal scroll-mt-24">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-[var(--secondary)] mb-3">Pourquoi NaturEspaces ?</h2>
+                <p class="text-slate-500 uppercase tracking-[0.2em] text-xs md:text-sm font-semibold">Six raisons de nous faire confiance</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" data-stagger>
+                <article class="card-hover-premium stagger-item bg-white p-8 rounded-2xl shadow-sm border border-slate-100" style="--d:0ms">
+                    <div class="w-14 h-14 bg-[var(--primary)]/10 text-[var(--primary)] rounded-xl flex items-center justify-center mb-5"><span class="material-symbols-outlined text-3xl card-icon" aria-hidden="true">workspace_premium</span></div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Ancrage métier de 13 ans</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Une expérience opérationnelle continue depuis 2013, validée par 106 sites d'intervention en 2025.</p>
+                </article>
+
+                <article class="card-hover-premium stagger-item bg-white p-8 rounded-2xl shadow-sm border border-slate-100" style="--d:90ms">
+                    <div class="w-14 h-14 bg-[var(--secondary)]/10 text-[var(--secondary)] rounded-xl flex items-center justify-center mb-5"><span class="material-symbols-outlined text-3xl card-icon" aria-hidden="true">handshake</span></div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Modèle d'insertion unique</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Entreprise d'insertion (EI) labellisée ESS. Chaque commande finance directement un parcours de réinsertion professionnelle.</p>
+                </article>
+
+                <article class="card-hover-premium stagger-item bg-white p-8 rounded-2xl shadow-sm border border-slate-100" style="--d:180ms">
+                    <div class="w-14 h-14 bg-[var(--accent)]/15 text-[var(--accent)] rounded-xl flex items-center justify-center mb-5"><span class="material-symbols-outlined text-3xl card-icon" aria-hidden="true">location_on</span></div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Maillage opérationnel IDF</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Intervention sur 5 départements d'Île-de-France. Réactivité et capacité multi-sites garanties.</p>
+                </article>
+
+                <article class="card-hover-premium stagger-item bg-white p-8 rounded-2xl shadow-sm border border-slate-100" style="--d:270ms">
+                    <div class="w-14 h-14 bg-[var(--primary)]/10 text-[var(--primary)] rounded-xl flex items-center justify-center mb-5"><span class="material-symbols-outlined text-3xl card-icon" aria-hidden="true">gavel</span></div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Conformité commande publique</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Référencement sur les marchés réservés (art. L. 2113-13). Solution clé en main pour la clause sociale d'insertion.</p>
+                </article>
+
+                <article class="card-hover-premium stagger-item bg-white p-8 rounded-2xl shadow-sm border border-slate-100" style="--d:360ms">
+                    <div class="w-14 h-14 bg-[var(--secondary)]/10 text-[var(--secondary)] rounded-xl flex items-center justify-center mb-5"><span class="material-symbols-outlined text-3xl card-icon" aria-hidden="true">school</span></div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Formation continue Afest</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Action de Formation en Situation de Travail avec OCAPIAT depuis 2024. Garantie de qualité d'exécution sur chantier.</p>
+                </article>
+
+                <article class="card-hover-premium stagger-item bg-white p-8 rounded-2xl shadow-sm border border-slate-100" style="--d:450ms">
+                    <div class="w-14 h-14 bg-[var(--accent)]/15 text-[var(--accent)] rounded-xl flex items-center justify-center mb-5"><span class="material-symbols-outlined text-3xl card-icon" aria-hidden="true">energy_savings_leaf</span></div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Engagement environnemental</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Gestion différenciée, biodiversité urbaine, démarche de décarbonation. Pensons le paysage autrement.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 11 : Contact -->
+    <footer id="contact" class="py-24 px-6 bg-white relative reveal scroll-mt-24">
+        <div class="max-w-2xl mx-auto glass-card rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-[var(--secondary)]/10 text-center">
+            <h2 class="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-1">Bassem GASTLI</h2>
+            <p class="text-[var(--primary)] text-lg font-semibold mb-6 tracking-wide uppercase">Directeur</p>
+
+            <div class="grid md:grid-cols-[1fr_2fr] gap-4 mb-6">
+                <a href="tel:+33699537433" class="flex items-center justify-center gap-3 p-3 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-100 transition-colors">
+                    <span class="material-symbols-outlined text-[var(--secondary)]">call</span>
+                    <span class="text-sm md:text-base font-medium whitespace-nowrap">06 99 53 74 33</span>
+                </a>
+                <a href="mailto:bassem.gastli@naturespaces.net" class="flex items-center justify-center gap-3 p-3 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-100 transition-colors">
+                    <span class="material-symbols-outlined text-[var(--secondary)] shrink-0">mail</span>
+                    <span class="text-sm md:text-base font-medium whitespace-nowrap">bassem.gastli@naturespaces.net</span>
+                </a>
+            </div>
+
+            <div class="flex justify-center">
+                <a
+                    href="mailto:bassem.gastli@naturespaces.net?subject=Demande%20de%20rappel%20-%20NaturEspaces&body=Bonjour%2C%0A%0AJe%20souhaiterais%20%C3%AAtre%20rappel%C3%A9%20au%20num%C3%A9ro%20suivant%20%3A%20%0A%0AObjet%20de%20ma%20demande%20%3A%20%0A%0AMerci."
+                    class="bg-[var(--primary)] hover:bg-[#D35400] text-white text-base md:text-lg px-8 md:px-10 py-3 md:py-4 rounded-full font-bold shadow-xl shadow-[var(--primary)]/20 transition-all active:scale-95 inline-flex items-center gap-3"
+                >
+                    <span class="material-symbols-outlined">notifications_active</span>
+                    Demander un rappel
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Section 12 : Sous-footer -->
+    <div class="bg-slate-50 border-t border-slate-100 py-12 px-6">
+        <div class="max-w-5xl mx-auto flex flex-col items-center gap-6">
+            <a
+                href="https://www.linkedin.com/company/naturespaces/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 group"
+                aria-label="Suivez NaturEspaces sur LinkedIn"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-10 h-10 fill-[var(--primary)] group-hover:scale-110 group-hover:fill-[#D35400] transition-transform">
+                    <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" />
+                </svg>
+                <span class="text-slate-700 font-semibold text-lg group-hover:text-[var(--primary)] transition-colors">Suivez-nous sur LinkedIn</span>
+            </a>
+
+            <p class="text-center text-slate-500 text-sm md:text-base">
+                © 2026 NaturEspaces. Tous droits réservés. Pensons le paysage autrement.
+            </p>
+
+            <p class="text-center text-slate-500 text-sm">
+                <a href="mentions-legales.html" class="hover:text-[var(--secondary)] underline-offset-2 hover:underline transition-colors">Mentions légales</a>
+                <span class="mx-2 text-slate-300">|</span>
+                <a href="politique-confidentialite.html" class="hover:text-[var(--secondary)] underline-offset-2 hover:underline transition-colors">Politique de confidentialité</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>

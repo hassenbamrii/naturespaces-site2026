@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Politique de confidentialité — NaturEspaces</title>
+    <meta name="description" content="Politique de confidentialité du site naturespaces.net : aucune collecte automatique, vos droits RGPD, gestion des cookies et ressources tierces." />
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path fill='%234A7023' d='M32 6c-9 8-18 16-18 28a18 18 0 0 0 36 0c0-12-9-20-18-28z'/><path fill='%238DB600' d='M32 18c-5 6-11 12-11 20a11 11 0 0 0 22 0c0-8-6-14-11-20z'/></svg>" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+
+    <link rel="stylesheet" href="assets/css/animations.css" />
+
+    <style type="text/tailwindcss">
+        :root {
+            --primary: #E67E22;
+            --secondary: #4A7023;
+            --accent: #8DB600;
+        }
+        @layer base {
+            .font-display { font-family: 'Playfair Display', serif; }
+            .font-body { font-family: 'Outfit', sans-serif; }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(74, 112, 35, 0.1);
+        }
+        .bg-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(74, 112, 35, 0.05) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+    </style>
+</head>
+<body class="font-body bg-[#FDFCFB] text-slate-800 antialiased bg-pattern">
+
+    <!-- Barre de progression de lecture -->
+    <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
+
+    <!-- Header sticky -->
+    <header class="legal-header sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 h-[72px] flex items-center justify-between gap-4">
+            <a href="index.html" class="shrink-0" aria-label="Retour à l'accueil NaturEspaces">
+                <img src="assets/images/logo-naturespaces.png" alt="Logo NaturEspaces" class="h-14 w-auto" />
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-8" aria-label="Navigation principale">
+                <a href="index.html#qui-sommes-nous" class="text-slate-600 hover:text-[var(--primary)] font-medium text-sm transition-colors">Qui sommes-nous</a>
+                <a href="index.html#demarche" class="text-slate-600 hover:text-[var(--primary)] font-medium text-sm transition-colors">Notre démarche</a>
+                <a href="index.html#references" class="text-slate-600 hover:text-[var(--primary)] font-medium text-sm transition-colors">Références</a>
+                <a href="index.html#contact" class="text-slate-600 hover:text-[var(--primary)] font-medium text-sm transition-colors">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="hidden sm:inline-flex items-center gap-2 border-2 border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--secondary)] hover:text-white px-4 py-2 rounded-full font-semibold transition-colors text-sm">
+                    <span aria-hidden="true">←</span> Retour à l'accueil
+                </a>
+                <button type="button" class="burger lg:hidden" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="legal-mobile-nav">
+                    <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Navigation mobile -->
+        <nav id="legal-mobile-nav" class="legal-mobile-nav lg:hidden" aria-label="Navigation mobile" hidden>
+            <a href="index.html#qui-sommes-nous">Qui sommes-nous</a>
+            <a href="index.html#demarche">Notre démarche</a>
+            <a href="index.html#references">Références</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="index.html"><span aria-hidden="true">←</span> Retour à l'accueil</a>
+        </nav>
+    </header>
+
+    <!-- Hero de page -->
+    <section class="legal-hero relative overflow-hidden bg-gradient-to-br from-[var(--secondary)]/15 via-[var(--accent)]/8 to-transparent">
+        <div class="bg-pattern absolute inset-0 opacity-60" aria-hidden="true"></div>
+        <div class="relative max-w-6xl mx-auto px-6 py-16 md:py-20 text-center">
+            <span class="material-symbols-outlined text-7xl text-[var(--primary)]" aria-hidden="true">verified_user</span>
+            <h1 class="font-display text-5xl md:text-6xl font-bold text-[var(--secondary)] mt-4 mb-3">Politique de confidentialité</h1>
+            <p class="text-slate-600 text-lg">Vos données protégées, conformément au RGPD</p>
+            <nav class="mt-6 flex items-center justify-center gap-2 text-sm" aria-label="Fil d'Ariane">
+                <a href="index.html" class="text-[var(--secondary)] hover:text-[var(--primary)] hover:underline underline-offset-2 font-medium">Accueil</a>
+                <span class="text-slate-400" aria-hidden="true">›</span>
+                <span class="text-[var(--primary)] font-semibold" aria-current="page">Politique de confidentialité</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Contenu -->
+    <main class="max-w-6xl mx-auto px-6 py-14">
+        <div class="lg:grid lg:grid-cols-[240px_1fr] lg:gap-12">
+
+            <!-- Sommaire sticky (desktop) -->
+            <aside class="hidden lg:block">
+                <nav class="legal-toc sticky top-[100px]" aria-label="Sommaire">
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-4">Sommaire</p>
+                    <ol class="space-y-1">
+                        <li><a href="#sec-preambule" class="legal-toc-link"><span class="legal-toc-num">01</span> Préambule</a></li>
+                        <li><a href="#sec-responsable" class="legal-toc-link"><span class="legal-toc-num">02</span> Responsable du traitement</a></li>
+                        <li><a href="#sec-collecte" class="legal-toc-link"><span class="legal-toc-num">03</span> Collecte de données via le site</a></li>
+                        <li><a href="#sec-email" class="legal-toc-link"><span class="legal-toc-num">04</span> Données collectées par email</a></li>
+                        <li><a href="#sec-cookies" class="legal-toc-link"><span class="legal-toc-num">05</span> Cookies et ressources externes</a></li>
+                        <li><a href="#sec-droits" class="legal-toc-link"><span class="legal-toc-num">06</span> Vos droits</a></li>
+                        <li><a href="#sec-securite" class="legal-toc-link"><span class="legal-toc-num">07</span> Sécurité</a></li>
+                        <li><a href="#sec-modif" class="legal-toc-link"><span class="legal-toc-num">08</span> Modification de la politique</a></li>
+                    </ol>
+                </nav>
+            </aside>
+
+            <!-- Article juridique -->
+            <article class="prose prose-slate max-w-none lg:pl-16 prose-headings:font-display prose-h2:text-[var(--secondary)] prose-h2:border-l-4 prose-h2:border-[var(--primary)] prose-h2:pl-4 prose-h2:py-1 prose-a:text-[var(--secondary)] prose-a:font-semibold hover:prose-a:text-[var(--primary)] prose-strong:text-slate-900 prose-table:text-sm">
+
+                <section id="sec-preambule" class="legal-section">
+                    <span class="section-number" aria-hidden="true">01</span>
+                    <h2>Préambule</h2>
+                    <p>NATURESPACES attache une grande importance au respect de la vie privée des utilisateurs de son site <strong>naturespaces.net</strong>. La présente politique de confidentialité informe les visiteurs sur la manière dont leurs données personnelles sont — ou ne sont pas — collectées, utilisées et protégées, conformément au Règlement Général sur la Protection des Données (Règlement UE 2016/679, dit « RGPD ») et à la loi Informatique et Libertés modifiée.</p>
+                </section>
+
+                <section id="sec-responsable" class="legal-section">
+                    <span class="section-number" aria-hidden="true">02</span>
+                    <h2>Responsable du traitement</h2>
+                    <p>
+                        <strong>NATURESPACES</strong> (SARL au capital de 29 000 €)<br />
+                        855 Avenue Roger Salengro, 92370 Chaville<br />
+                        Contact : <a href="mailto:bassem.gastli@naturespaces.net">bassem.gastli@naturespaces.net</a>
+                    </p>
+                </section>
+
+                <section id="sec-collecte" class="legal-section">
+                    <span class="section-number" aria-hidden="true">03</span>
+                    <h2>Collecte de données via le site</h2>
+                    <p>Le site naturespaces.net est un site vitrine institutionnel. <strong>Il ne collecte aucune donnée personnelle de manière automatique</strong> :</p>
+                    <ul>
+                        <li>Aucun formulaire de contact ne figure sur le site</li>
+                        <li>Aucune inscription, espace utilisateur ou newsletter n'est proposé</li>
+                        <li>Aucun outil de mesure d'audience (Google Analytics ou équivalent) n'est installé</li>
+                        <li>Aucun cookie de profilage, de publicité ou de suivi n'est déposé</li>
+                    </ul>
+                    <p>Lorsque vous cliquez sur le bouton <strong>« Demander un rappel »</strong> ou sur l'adresse email affichée, votre logiciel de messagerie s'ouvre localement sur votre appareil. Vous restez maître des informations que vous choisissez ou non de nous transmettre.</p>
+                </section>
+
+                <section id="sec-email" class="legal-section">
+                    <span class="section-number" aria-hidden="true">04</span>
+                    <h2>Données collectées si vous nous contactez par email</h2>
+                    <p>Lorsque vous prenez contact avec NATURESPACES via l'adresse <strong>bassem.gastli@naturespaces.net</strong> (par exemple en utilisant le bouton « Demander un rappel »), les informations suivantes sont susceptibles d'être collectées et conservées :</p>
+                    <ul>
+                        <li>Votre adresse email</li>
+                        <li>Votre nom et coordonnées, si vous les communiquez</li>
+                        <li>Le contenu de votre message et tout document éventuellement transmis</li>
+                    </ul>
+                    <p><strong>Finalité du traitement</strong> : répondre à votre demande et assurer le suivi commercial, opérationnel ou administratif.</p>
+                    <p><strong>Base légale</strong> : intérêt légitime de NATURESPACES à répondre à ses correspondants ; et, le cas échéant, exécution de mesures précontractuelles prises à votre demande (article 6.1.b RGPD).</p>
+                    <p><strong>Durée de conservation</strong> : la durée nécessaire au traitement de votre demande, prolongée le cas échéant par les durées légales applicables (notamment comptables et fiscales : jusqu'à 10 ans).</p>
+                    <p><strong>Destinataires</strong> : équipe interne de NATURESPACES uniquement. Aucune transmission à des tiers, sauf obligation légale.</p>
+                </section>
+
+                <section id="sec-cookies" class="legal-section">
+                    <span class="section-number" aria-hidden="true">05</span>
+                    <h2>Cookies et ressources externes</h2>
+                    <p>Le site naturespaces.net <strong>n'utilise aucun cookie de mesure d'audience, de profilage ou publicitaire</strong>.</p>
+                    <p>Toutefois, certaines ressources nécessaires à l'affichage du site sont chargées depuis des serveurs tiers :</p>
+
+                    <div class="overflow-x-auto my-6">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-[var(--secondary)]/10">
+                                    <th class="border border-slate-200 px-4 py-3 text-left font-bold">Ressource</th>
+                                    <th class="border border-slate-200 px-4 py-3 text-left font-bold">Fournisseur</th>
+                                    <th class="border border-slate-200 px-4 py-3 text-left font-bold">Finalité</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-slate-200 px-4 py-3">Polices Playfair Display et Outfit</td>
+                                    <td class="border border-slate-200 px-4 py-3">Google Fonts</td>
+                                    <td class="border border-slate-200 px-4 py-3">Affichage typographique</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="border border-slate-200 px-4 py-3">Icônes Material Symbols</td>
+                                    <td class="border border-slate-200 px-4 py-3">Google Fonts</td>
+                                    <td class="border border-slate-200 px-4 py-3">Affichage des pictogrammes</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-slate-200 px-4 py-3">Framework CSS TailwindCSS</td>
+                                    <td class="border border-slate-200 px-4 py-3">CDN public (cdn.tailwindcss.com)</td>
+                                    <td class="border border-slate-200 px-4 py-3">Mise en forme du site</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>Le chargement de ces ressources peut entraîner la transmission de votre adresse IP aux fournisseurs concernés (notamment Google LLC, États-Unis). Cette transmission est strictement technique et n'est pas utilisée par NATURESPACES à des fins de suivi.</p>
+                </section>
+
+                <section id="sec-droits" class="legal-section">
+                    <span class="section-number" aria-hidden="true">06</span>
+                    <h2>Vos droits</h2>
+                    <p>Conformément aux articles 15 à 22 du RGPD, vous disposez à tout moment des droits suivants sur vos données personnelles :</p>
+
+                    <!-- Pictogrammes RGPD : 6 droits en grille de cartes -->
+                    <div class="not-prose grid sm:grid-cols-2 lg:grid-cols-3 gap-4 my-8">
+                        <div class="card-hover-premium rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
+                            <span class="material-symbols-outlined text-3xl text-[var(--primary)] card-icon" aria-hidden="true">visibility</span>
+                            <h3 class="font-bold text-slate-900 mt-3 mb-1">Droit d'accès</h3>
+                            <p class="text-sm text-slate-600 m-0">obtenir confirmation et copie des données vous concernant</p>
+                        </div>
+                        <div class="card-hover-premium rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
+                            <span class="material-symbols-outlined text-3xl text-[var(--secondary)] card-icon" aria-hidden="true">edit</span>
+                            <h3 class="font-bold text-slate-900 mt-3 mb-1">Droit de rectification</h3>
+                            <p class="text-sm text-slate-600 m-0">faire corriger des données inexactes ou incomplètes</p>
+                        </div>
+                        <div class="card-hover-premium rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
+                            <span class="material-symbols-outlined text-3xl text-[var(--accent)] card-icon" aria-hidden="true">delete</span>
+                            <h3 class="font-bold text-slate-900 mt-3 mb-1">Droit à l'effacement</h3>
+                            <p class="text-sm text-slate-600 m-0">« droit à l'oubli »</p>
+                        </div>
+                        <div class="card-hover-premium rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
+                            <span class="material-symbols-outlined text-3xl text-[var(--primary)] card-icon" aria-hidden="true">pause_circle</span>
+                            <h3 class="font-bold text-slate-900 mt-3 mb-1">Droit à la limitation</h3>
+                            <p class="text-sm text-slate-600 m-0">du traitement</p>
+                        </div>
+                        <div class="card-hover-premium rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
+                            <span class="material-symbols-outlined text-3xl text-[var(--secondary)] card-icon" aria-hidden="true">block</span>
+                            <h3 class="font-bold text-slate-900 mt-3 mb-1">Droit d'opposition</h3>
+                            <p class="text-sm text-slate-600 m-0">au traitement</p>
+                        </div>
+                        <div class="card-hover-premium rounded-2xl border border-slate-100 bg-white p-6 shadow-sm">
+                            <span class="material-symbols-outlined text-3xl text-[var(--accent)] card-icon" aria-hidden="true">swap_horiz</span>
+                            <h3 class="font-bold text-slate-900 mt-3 mb-1">Droit à la portabilité</h3>
+                            <p class="text-sm text-slate-600 m-0">des données</p>
+                        </div>
+                    </div>
+
+                    <p>Pour exercer ces droits, contactez-nous :</p>
+                    <ul>
+                        <li>Par email : <strong><a href="mailto:bassem.gastli@naturespaces.net">bassem.gastli@naturespaces.net</a></strong></li>
+                        <li>Par courrier : NATURESPACES, 855 Avenue Roger Salengro, 92370 Chaville</li>
+                    </ul>
+                    <p>Une réponse vous sera apportée dans un délai maximum d'un mois.</p>
+                    <p>Vous disposez également du droit d'introduire une <strong>réclamation auprès de la CNIL</strong> (Commission Nationale de l'Informatique et des Libertés) : 3 Place de Fontenoy, 75007 Paris — <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">www.cnil.fr</a>.</p>
+                </section>
+
+                <section id="sec-securite" class="legal-section">
+                    <span class="section-number" aria-hidden="true">07</span>
+                    <h2>Sécurité</h2>
+                    <p>NATURESPACES met en œuvre les mesures techniques et organisationnelles appropriées pour protéger les données personnelles contre toute perte, accès non autorisé, divulgation ou altération.</p>
+                </section>
+
+                <section id="sec-modif" class="legal-section">
+                    <span class="section-number" aria-hidden="true">08</span>
+                    <h2>Modification de la politique</h2>
+                    <p>La présente politique peut être modifiée à tout moment pour refléter les évolutions législatives, jurisprudentielles ou techniques. Toute modification sera publiée sur cette page avec mise à jour de la date ci-dessous.</p>
+                </section>
+
+                <hr class="my-12 border-slate-200" />
+
+                <p class="text-sm italic text-slate-500"><em>Dernière mise à jour : [DATE DU JOUR DE PUBLICATION]</em></p>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer complet -->
+    <footer class="bg-white border-t border-slate-100">
+        <div class="max-w-2xl mx-auto px-6 py-16">
+            <div class="glass-card rounded-3xl p-8 text-center shadow-xl border-2 border-[var(--secondary)]/10">
+                <h2 class="text-2xl md:text-3xl font-display font-bold text-slate-900 mb-1">Bassem GASTLI</h2>
+                <p class="text-[var(--primary)] font-semibold mb-6 uppercase tracking-wide">Directeur</p>
+                <div class="grid sm:grid-cols-2 gap-3">
+                    <a href="tel:+33699537433" class="flex items-center justify-center gap-3 p-3 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-100 transition-colors">
+                        <span class="material-symbols-outlined text-[var(--secondary)]" aria-hidden="true">call</span>
+                        <span class="text-sm md:text-base font-medium whitespace-nowrap">06 99 53 74 33</span>
+                    </a>
+                    <a href="mailto:bassem.gastli@naturespaces.net" class="flex items-center justify-center gap-3 p-3 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-100 transition-colors">
+                        <span class="material-symbols-outlined text-[var(--secondary)] shrink-0" aria-hidden="true">mail</span>
+                        <span class="text-sm md:text-base font-medium whitespace-nowrap">bassem.gastli@naturespaces.net</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-slate-50 border-t border-slate-100 py-12 px-6">
+            <div class="max-w-5xl mx-auto flex flex-col items-center gap-6">
+                <a href="https://www.linkedin.com/company/naturespaces/posts/?feedView=all" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 group" aria-label="Suivez NaturEspaces sur LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-10 h-10 fill-[var(--primary)] group-hover:scale-110 group-hover:fill-[#D35400] transition-transform">
+                        <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" />
+                    </svg>
+                    <span class="text-slate-700 font-semibold text-lg group-hover:text-[var(--primary)] transition-colors">Suivez-nous sur LinkedIn</span>
+                </a>
+
+                <p class="text-center text-slate-500 text-sm md:text-base">
+                    © 2026 NaturEspaces. Tous droits réservés. Pensons le paysage autrement.
+                </p>
+
+                <p class="text-center text-slate-500 text-sm">
+                    <a href="mentions-legales.html" class="hover:text-[var(--secondary)] underline-offset-2 hover:underline transition-colors">Mentions légales</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mentions légales — NaturEspaces</title>
+    <meta name="description" content="Mentions légales du site naturespaces.net : éditeur, hébergeur, propriété intellectuelle, responsabilité." />
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path fill='%234A7023' d='M32 6c-9 8-18 16-18 28a18 18 0 0 0 36 0c0-12-9-20-18-28z'/><path fill='%238DB600' d='M32 18c-5 6-11 12-11 20a11 11 0 0 0 22 0c0-8-6-14-11-20z'/></svg>" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+
+    <link rel="stylesheet" href="assets/css/animations.css" />
+
+    <style type="text/tailwindcss">
+        :root {
+            --primary: #E67E22;
+            --secondary: #4A7023;
+            --accent: #8DB600;
+        }
+        @layer base {
+            .font-display { font-family: 'Playfair Display', serif; }
+            .font-body { font-family: 'Outfit', sans-serif; }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(74, 112, 35, 0.1);
+        }
+        .bg-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(74, 112, 35, 0.05) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+    </style>
+</head>
+<body class="font-body bg-[#FDFCFB] text-slate-800 antialiased bg-pattern">
+
+    <!-- Barre de progression de lecture -->
+    <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
+
+    <!-- Header sticky -->
+    <header class="legal-header sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 h-[72px] flex items-center justify-between gap-4">
+            <a href="index.html" class="shrink-0" aria-label="Retour à l'accueil NaturEspaces">
+                <img src="assets/images/logo-naturespaces.png" alt="Logo NaturEspaces" class="h-14 w-auto" />
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-8" aria-label="Navigation principale">
+                <a href="index.html#qui-sommes-nous" class="text-slate-600 hover:text-[var(--primary)] font-medium text-sm transition-colors">Qui sommes-nous</a>
+                <a href="index.html#demarche" class="text-slate-600 hover:text-[var(--primary)] font-medium text-sm transition-colors">Notre démarche</a>
+                <a href="index.html#references" class="text-slate-600 hover:text-[var(--primary)] font-medium text-sm transition-colors">Références</a>
+                <a href="index.html#contact" class="text-slate-600 hover:text-[var(--primary)] font-medium text-sm transition-colors">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="hidden sm:inline-flex items-center gap-2 border-2 border-[var(--secondary)] text-[var(--secondary)] hover:bg-[var(--secondary)] hover:text-white px-4 py-2 rounded-full font-semibold transition-colors text-sm">
+                    <span aria-hidden="true">←</span> Retour à l'accueil
+                </a>
+                <button type="button" class="burger lg:hidden" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="legal-mobile-nav">
+                    <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Navigation mobile -->
+        <nav id="legal-mobile-nav" class="legal-mobile-nav lg:hidden" aria-label="Navigation mobile" hidden>
+            <a href="index.html#qui-sommes-nous">Qui sommes-nous</a>
+            <a href="index.html#demarche">Notre démarche</a>
+            <a href="index.html#references">Références</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="index.html"><span aria-hidden="true">←</span> Retour à l'accueil</a>
+        </nav>
+    </header>
+
+    <!-- Hero de page -->
+    <section class="legal-hero relative overflow-hidden bg-gradient-to-br from-[var(--secondary)]/15 via-[var(--accent)]/8 to-transparent">
+        <div class="bg-pattern absolute inset-0 opacity-60" aria-hidden="true"></div>
+        <div class="relative max-w-6xl mx-auto px-6 py-16 md:py-20 text-center">
+            <span class="material-symbols-outlined text-7xl text-[var(--primary)]" aria-hidden="true">gavel</span>
+            <h1 class="font-display text-5xl md:text-6xl font-bold text-[var(--secondary)] mt-4 mb-3">Mentions légales</h1>
+            <p class="text-slate-600 text-lg">Informations légales conformes au droit français</p>
+            <nav class="mt-6 flex items-center justify-center gap-2 text-sm" aria-label="Fil d'Ariane">
+                <a href="index.html" class="text-[var(--secondary)] hover:text-[var(--primary)] hover:underline underline-offset-2 font-medium">Accueil</a>
+                <span class="text-slate-400" aria-hidden="true">›</span>
+                <span class="text-[var(--primary)] font-semibold" aria-current="page">Mentions légales</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Contenu -->
+    <main class="max-w-6xl mx-auto px-6 py-14">
+        <div class="lg:grid lg:grid-cols-[240px_1fr] lg:gap-12">
+
+            <!-- Sommaire sticky (desktop) -->
+            <aside class="hidden lg:block">
+                <nav class="legal-toc sticky top-[100px]" aria-label="Sommaire">
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mb-4">Sommaire</p>
+                    <ol class="space-y-1">
+                        <li><a href="#sec-editeur" class="legal-toc-link"><span class="legal-toc-num">01</span> Éditeur du site</a></li>
+                        <li><a href="#sec-representants" class="legal-toc-link"><span class="legal-toc-num">02</span> Représentants légaux</a></li>
+                        <li><a href="#sec-directeur" class="legal-toc-link"><span class="legal-toc-num">03</span> Directeur de la publication</a></li>
+                        <li><a href="#sec-hebergement" class="legal-toc-link"><span class="legal-toc-num">04</span> Hébergement</a></li>
+                        <li><a href="#sec-pi" class="legal-toc-link"><span class="legal-toc-num">05</span> Propriété intellectuelle</a></li>
+                        <li><a href="#sec-liens" class="legal-toc-link"><span class="legal-toc-num">06</span> Liens externes</a></li>
+                        <li><a href="#sec-responsabilite" class="legal-toc-link"><span class="legal-toc-num">07</span> Responsabilité</a></li>
+                        <li><a href="#sec-donnees" class="legal-toc-link"><span class="legal-toc-num">08</span> Données personnelles</a></li>
+                        <li><a href="#sec-droit" class="legal-toc-link"><span class="legal-toc-num">09</span> Droit applicable</a></li>
+                    </ol>
+                </nav>
+            </aside>
+
+            <!-- Article juridique -->
+            <article class="prose prose-slate max-w-none lg:pl-16 prose-headings:font-display prose-h2:text-[var(--secondary)] prose-h2:border-l-4 prose-h2:border-[var(--primary)] prose-h2:pl-4 prose-h2:py-1 prose-a:text-[var(--secondary)] prose-a:font-semibold hover:prose-a:text-[var(--primary)] prose-strong:text-slate-900">
+
+                <section id="sec-editeur" class="legal-section">
+                    <span class="section-number" aria-hidden="true">01</span>
+                    <h2>Éditeur du site</h2>
+                    <p>Le site <strong>naturespaces.net</strong> est édité par :</p>
+
+                    <!-- Carte d'identité visuelle de l'entreprise -->
+                    <div class="not-prose my-8 rounded-2xl border border-[var(--secondary)]/20 bg-white shadow-sm overflow-hidden">
+                        <div class="grid md:grid-cols-2">
+                            <div class="p-7 md:border-r border-slate-100 flex flex-col gap-4">
+                                <img src="assets/images/logo-naturespaces.png" alt="Logo NaturEspaces" class="h-16 w-auto self-start" />
+                                <div>
+                                    <div class="font-display text-2xl font-bold text-slate-900">NATURESPACES</div>
+                                    <div class="text-slate-600">Société à responsabilité limitée (SARL)</div>
+                                </div>
+                                <div class="flex items-start gap-2 text-slate-600">
+                                    <span class="material-symbols-outlined text-[var(--secondary)] text-xl shrink-0" aria-hidden="true">location_on</span>
+                                    <span><span class="block text-xs font-semibold uppercase tracking-wide text-slate-500">Siège social</span>855 Avenue Roger Salengro, 92370 Chaville, France</span>
+                                </div>
+                            </div>
+                            <div class="p-7 grid grid-cols-1 sm:grid-cols-2 gap-3 bg-slate-50/60">
+                                <div class="rounded-xl border border-slate-100 bg-white p-4">
+                                    <div class="flex items-center gap-2 mb-1"><span class="material-symbols-outlined text-lg text-[var(--secondary)]" aria-hidden="true">tag</span><span class="text-xs font-semibold uppercase tracking-wide text-slate-500">SIREN</span></div>
+                                    <div class="font-semibold text-slate-900 text-sm">791 592 330</div>
+                                </div>
+                                <div class="rounded-xl border border-slate-100 bg-white p-4">
+                                    <div class="flex items-center gap-2 mb-1"><span class="material-symbols-outlined text-lg text-[var(--secondary)]" aria-hidden="true">pin</span><span class="text-xs font-semibold uppercase tracking-wide text-slate-500">SIRET (siège social)</span></div>
+                                    <div class="font-semibold text-slate-900 text-sm">791 592 330 00025</div>
+                                </div>
+                                <div class="rounded-xl border border-slate-100 bg-white p-4">
+                                    <div class="flex items-center gap-2 mb-1"><span class="material-symbols-outlined text-lg text-[var(--secondary)]" aria-hidden="true">gavel</span><span class="text-xs font-semibold uppercase tracking-wide text-slate-500">RCS</span></div>
+                                    <div class="font-semibold text-slate-900 text-sm">Nanterre</div>
+                                </div>
+                                <div class="rounded-xl border border-slate-100 bg-white p-4">
+                                    <div class="flex items-center gap-2 mb-1"><span class="material-symbols-outlined text-lg text-[var(--secondary)]" aria-hidden="true">category</span><span class="text-xs font-semibold uppercase tracking-wide text-slate-500">Code APE</span></div>
+                                    <div class="font-semibold text-slate-900 text-sm">81.30Z — Services d'aménagement paysager</div>
+                                </div>
+                                <div class="rounded-xl border border-slate-100 bg-white p-4">
+                                    <div class="flex items-center gap-2 mb-1"><span class="material-symbols-outlined text-lg text-[var(--secondary)]" aria-hidden="true">euro</span><span class="text-xs font-semibold uppercase tracking-wide text-slate-500">N° TVA intracommunautaire</span></div>
+                                    <div class="font-semibold text-slate-900 text-sm">FR13 791 592 330</div>
+                                </div>
+                                <div class="rounded-xl border border-slate-100 bg-white p-4">
+                                    <div class="flex items-center gap-2 mb-1"><span class="material-symbols-outlined text-lg text-[var(--secondary)]" aria-hidden="true">savings</span><span class="text-xs font-semibold uppercase tracking-wide text-slate-500">Capital social</span></div>
+                                    <div class="font-semibold text-slate-900 text-sm">29 000 € (fixe)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>
+                        Téléphone : <a href="tel:+33699537433">06 99 53 74 33</a><br />
+                        Email : <a href="mailto:bassem.gastli@naturespaces.net">bassem.gastli@naturespaces.net</a>
+                    </p>
+                    <p>NaturEspaces est une entreprise relevant de l'Économie Sociale et Solidaire (ESS), agréée Entreprise Sociale Inclusive (EI).</p>
+                </section>
+
+                <section id="sec-representants" class="legal-section">
+                    <span class="section-number" aria-hidden="true">02</span>
+                    <h2>Représentants légaux</h2>
+                    <p>Co-gérants de la société :</p>
+                    <ul>
+                        <li>Yann FRADIN</li>
+                        <li>Christophe VEZINE</li>
+                    </ul>
+                </section>
+
+                <section id="sec-directeur" class="legal-section">
+                    <span class="section-number" aria-hidden="true">03</span>
+                    <h2>Directeur de la publication</h2>
+                    <p>[À COMPLÉTER PAR LE CLIENT — par défaut, le gérant légal : Yann FRADIN ou Christophe VEZINE selon désignation interne]</p>
+                </section>
+
+                <section id="sec-hebergement" class="legal-section">
+                    <span class="section-number" aria-hidden="true">04</span>
+                    <h2>Hébergement</h2>
+                    <p>Le site est hébergé par :</p>
+                    <p>
+                        <strong>Gandi SAS</strong><br />
+                        63-65 Boulevard Massena<br />
+                        75013 Paris, France<br />
+                        Téléphone : +33 1 70 37 76 61<br />
+                        Site web : <a href="https://www.gandi.net" target="_blank" rel="noopener noreferrer">www.gandi.net</a>
+                    </p>
+                </section>
+
+                <section id="sec-pi" class="legal-section">
+                    <span class="section-number" aria-hidden="true">05</span>
+                    <h2>Propriété intellectuelle</h2>
+                    <p>L'ensemble des contenus présents sur ce site (textes, images, logos, mise en page, code source) sont la propriété exclusive de NATURESPACES ou de leurs ayants droit respectifs. Toute reproduction, représentation, modification, publication, transmission, dénaturation, totale ou partielle, par quelque procédé que ce soit, est interdite sans l'autorisation écrite préalable de NATURESPACES.</p>
+                    <p>Les logos des clients et partenaires affichés sur ce site demeurent la propriété de leurs détenteurs respectifs et sont reproduits à des fins d'information et de référence professionnelle.</p>
+                </section>
+
+                <section id="sec-liens" class="legal-section">
+                    <span class="section-number" aria-hidden="true">06</span>
+                    <h2>Liens externes</h2>
+                    <p>Le site naturespaces.net peut contenir des liens vers des sites tiers, notamment la page LinkedIn officielle de NaturEspaces. NATURESPACES n'exerce aucun contrôle sur le contenu de ces sites et ne saurait être tenue responsable de leurs pratiques en matière de protection des données ou de leurs contenus.</p>
+                </section>
+
+                <section id="sec-responsabilite" class="legal-section">
+                    <span class="section-number" aria-hidden="true">07</span>
+                    <h2>Responsabilité</h2>
+                    <p>NATURESPACES s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site. Toutefois, des erreurs ou omissions peuvent survenir. L'utilisateur reconnaît utiliser ces informations sous sa responsabilité exclusive.</p>
+                </section>
+
+                <section id="sec-donnees" class="legal-section">
+                    <span class="section-number" aria-hidden="true">08</span>
+                    <h2>Données personnelles</h2>
+                    <p>Le traitement des données personnelles est détaillé dans notre <a href="politique-confidentialite.html">Politique de confidentialité</a>.</p>
+                </section>
+
+                <section id="sec-droit" class="legal-section">
+                    <span class="section-number" aria-hidden="true">09</span>
+                    <h2>Droit applicable</h2>
+                    <p>Les présentes mentions légales sont régies par le droit français. En cas de litige, et après échec de toute tentative de résolution amiable, les tribunaux français seront seuls compétents.</p>
+                </section>
+
+                <hr class="my-12 border-slate-200" />
+
+                <p class="text-sm italic text-slate-500"><em>Dernière mise à jour : [DATE DU JOUR DE PUBLICATION]</em></p>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer complet -->
+    <footer class="bg-white border-t border-slate-100">
+        <div class="max-w-2xl mx-auto px-6 py-16">
+            <div class="glass-card rounded-3xl p-8 text-center shadow-xl border-2 border-[var(--secondary)]/10">
+                <h2 class="text-2xl md:text-3xl font-display font-bold text-slate-900 mb-1">Bassem GASTLI</h2>
+                <p class="text-[var(--primary)] font-semibold mb-6 uppercase tracking-wide">Directeur</p>
+                <div class="grid sm:grid-cols-2 gap-3">
+                    <a href="tel:+33699537433" class="flex items-center justify-center gap-3 p-3 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-100 transition-colors">
+                        <span class="material-symbols-outlined text-[var(--secondary)]" aria-hidden="true">call</span>
+                        <span class="text-sm md:text-base font-medium whitespace-nowrap">06 99 53 74 33</span>
+                    </a>
+                    <a href="mailto:bassem.gastli@naturespaces.net" class="flex items-center justify-center gap-3 p-3 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-100 transition-colors">
+                        <span class="material-symbols-outlined text-[var(--secondary)] shrink-0" aria-hidden="true">mail</span>
+                        <span class="text-sm md:text-base font-medium whitespace-nowrap">bassem.gastli@naturespaces.net</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-slate-50 border-t border-slate-100 py-12 px-6">
+            <div class="max-w-5xl mx-auto flex flex-col items-center gap-6">
+                <a href="https://www.linkedin.com/company/naturespaces/posts/?feedView=all" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 group" aria-label="Suivez NaturEspaces sur LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-10 h-10 fill-[var(--primary)] group-hover:scale-110 group-hover:fill-[#D35400] transition-transform">
+                        <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" />
+                    </svg>
+                    <span class="text-slate-700 font-semibold text-lg group-hover:text-[var(--primary)] transition-colors">Suivez-nous sur LinkedIn</span>
+                </a>
+
+                <p class="text-center text-slate-500 text-sm md:text-base">
+                    © 2026 NaturEspaces. Tous droits réservés. Pensons le paysage autrement.
+                </p>
+
+                <p class="text-center text-slate-500 text-sm">
+                    <a href="politique-confidentialite.html" class="hover:text-[var(--secondary)] underline-offset-2 hover:underline transition-colors">Politique de confidentialité</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
